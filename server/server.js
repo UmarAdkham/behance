@@ -14,7 +14,6 @@ app.use(express.json());
 app.use((req, res, next) => {
   console.log("PATH", req.path);
   console.log("METHOD", req.method);
-  console.log("TIME", req.newDate());
   next();
 });
 
