@@ -20,11 +20,11 @@ app.use((req, res, next) => {
 //Database-ga Ulanish
 /*  */
 mongoose
-  .connect(process.env.ENVNOM)
+  .connect(process.env.MONGO_URL)
   .then(() => {
-    app.listen(process.env.ENVNOM, () => {
+    app.listen(process.env.PORT, () => {
       console.log("Mongo DB databesega ulanildi");
-      console.log(`Serverimiz ${process.env.ENVNOM}-chi portda ishlamoqda`); 
+      console.log(`Serverimiz ${process.env.PORT}-chi portda ishlamoqda`); 
     });
   })
   .catch((err) => console.log(err.message));
