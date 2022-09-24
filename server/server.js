@@ -6,7 +6,7 @@ const userRouter = require("./routers/userController");
 require("dotenv").config();
 
 //SERVER HALI BERI ISHLAMIDI ENV FAYL OCHILMAGAN
- 
+
 //midlleWare
 app.use(express.json());
 app.use((req, res, next) => {
@@ -15,6 +15,8 @@ app.use((req, res, next) => {
   console.log("TIME", new Date());
   next();
 });
+
+
 
 app.use("/api/user", userRouter);
 

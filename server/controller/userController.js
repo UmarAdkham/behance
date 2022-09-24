@@ -26,5 +26,18 @@ const register = async (req, res) => {
       res.status(400).json({ error: error.message });
     }
   };
+  const edit = async (req ,res)=>{
+    const {ism , parol} = req.body
+    console.log("first")
+    console.log(req.params.id);
+    try {
+     User.findOneAndUpdate( {_id:req.params.id},{ism , parol} , {new:true} ,(err, updatedUser)=>{
+        if (!err) res.json(updatedUser);
+        else res.json({ error: err.message });
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
-module.exports = {login, register};
+module.exports = {login, register, edit};

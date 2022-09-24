@@ -1,5 +1,5 @@
 const express = require('express');
-const { login, register } = require('../controller/userController');
+const { login, register , edit } = require('../controller/userController');
 
 
 const userRouter = express.Router()
@@ -13,6 +13,12 @@ userRouter.post("/register", register);
  */
 userRouter.post('/login', login)
 
+
+/**
+ * EDIT USERNAME AND PASSWORD
+ */
+
+userRouter.put('/:id' , edit)
 
 
 
