@@ -1,74 +1,67 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-.registerContiner {
-    background-image: url("https://wallpaperaccess.com/full/38580.jpg");
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.otaDiv{
+    width: 500px;
+    height: 550px;
+    // background-color: red;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    .registerText {
-        font-size: large;
-        height: 50%;
-        // background-color: white;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        color: white;
-        span {
-            background-color: black;
-            // color: white;
-            padding: 3px;
-            border-radius: 5px;
-            margin: 10px;
-        }
-    }
+    justify-content: center;
+    -webkit-box-shadow: 4px 4px 25px 0px rgba(34, 60, 80, 0.2);
+-moz-box-shadow: 4px 4px 25px 0px rgba(34, 60, 80, 0.2);
+box-shadow: 4px 4px 25px 0px rgba(34, 60, 80, 0.2);
 
-    .registerForm {
-        width: 500px;
-        height: 85%;
-        background-color: white;
-        border-radius: 10px;
-        form {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            label {
-                text-align: left;
-                width: 170px;
-            }
-        }
-    }
 }
+.bolaDiv1{
+text-align: center;
+form{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    height: 60%;
+   
 
-@media screen and (max-width: 1270px) {
-    .registerContiner {
+    
+
+
+    
+    label{
+        width: 80%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        .registerText {
-            height: 10%;
-            width: 500px;
-            background-color: white;
-            color: black;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            span {
-                color: white;
-            }
+        text-align: left;
+        input{
+            background: none;
+            border-style:none none solid none ;  
+            height: 28px;
         }
 
-        .registerForm {
-            border-radius: 0;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
+        input:focus{
+            outline: none;
+            border-bottom: 2px solid rgb(0, 191, 255);
         }
     }
+
+    div{
+        width: 80%;
+        display: flex;
+        gap: 10px;
+    }
+     
+    button{
+        position: absolute;
+        width: 110px;
+        height: 32px;
+        border-radius: 14px;
+        background-color: rgb(0, 191, 255);
+        color: white;
+        right: 10%;
+        bottom: 20%;
+        border: none;
+    }
+}
+}
+.boshlagichQadam{
+    text-align: left;
+    margin-left: 50px;
 }
