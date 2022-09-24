@@ -6,3 +6,5 @@ const viewsRouter = express.Router()
 
 
 viewsRouter.put('/:id', views)
+
+module.exports = viewsRouter
