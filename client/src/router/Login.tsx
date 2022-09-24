@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { loginInterface } from "../interface/registerInterface";
-import "./login.scss";
-
 
 function Login() {
     const [user, setUser] = useState<loginInterface>({
