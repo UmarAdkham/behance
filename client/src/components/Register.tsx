@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { registerInterface } from '../interface/registerInterface'
-
+import '../style/register.scss'
 function Register() {
 
     let [regitesr, setRegister] = useState<registerInterface>({
