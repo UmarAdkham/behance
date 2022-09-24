@@ -7,7 +7,7 @@ require("dotenv").config({ path: "" });
 //SERVER HALI BERI ISHLAMIDI ENV FAYL OCHILMAGAN
 
 
-
+//.
 
 //midlleWare
 app.use(express.json());
