@@ -5,7 +5,7 @@ const photoModelSchema = mongoose.Schema({
   title: String,
   userId: ObjectID(),
   likes: 0,
-  vievs: 0,
+  views: 0,
 });
 
 module.exports = mongoose.model("PhotoModel", photoModelSchema);
