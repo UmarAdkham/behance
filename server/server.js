@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 const mongoose = require("mongoose");
-require("dotenv").config({ path: "" });
+require("dotenv").config();
 
 //SERVER HALI BERI ISHLAMIDI ENV FAYL OCHILMAGAN
 
@@ -15,6 +15,7 @@ app.use((req, res, next) => {
   console.log("PATH", req.path);
   console.log("METHOD", req.method);
   console.log("TIME", req.newDate());
+  next();
 });
 
 //Database-ga Ulanish
