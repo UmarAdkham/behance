@@ -1,3 +1,5 @@
+
+
 export interface registerInterface {
     email: string,
     ism: string,
