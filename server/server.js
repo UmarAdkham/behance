@@ -7,8 +7,6 @@ require("dotenv").config();
 //SERVER HALI BERI ISHLAMIDI ENV FAYL OCHILMAGAN
 
 
-
-
 //midlleWare
 app.use(express.json());
 app.use((req, res, next) => {

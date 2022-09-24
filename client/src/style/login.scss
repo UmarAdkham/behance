@@ -1,0 +1,156 @@
+.login-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #0b2440;
+  background: url(https://auth.services.adobe.com/img/canvas/Fotolia_228355584_XL.jpg)
+    no-repeat center center;
+  background-size: cover;
+
+  .login-box {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.452);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+    gap: 10px;
+    font-family: sans-serif;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+
+    span {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      text-align: center;
+      background-color: #000b1d;
+      color: #fff;
+      padding: 5px;
+    }
+  }
+
+  .login-container {
+    width: 500px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+
+    form {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 1.3rem;
+
+      .btn-socialMedia,
+      input,
+      #hr,
+      button {
+        width: 356px;
+        height: 46px;
+        // padding: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        border: 1px solid rgba(128, 128, 128, 0.301);
+        font-size: 1rem;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      #hr {
+        border: none;
+        cursor: default;
+      }
+      .btn-facebook {
+        background-color: #1877f2;
+        color: #fff;
+      }
+      .btn-apple {
+        background-color: #000000;
+        color: #fff;
+      }
+
+      input {
+        border-style: none none solid none;
+        border-radius: 0px;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: rgb(0, 191, 255);
+        border-width: 2px;
+      }
+
+      button {
+        width: 100%;
+        padding: 13px;
+        border-radius: 20px;
+        background-color: green;
+        cursor: pointer;
+        border: none;
+        color: #fff;
+      }
+      .link {
+        font-size: 0.8rem;
+        color: blue;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .login-wrapper {
+    .login-box {
+      gap: 5px;
+    }
+
+    h1 {
+      font-size: 2rem;
+
+      span {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .login-container {
+      width: 350px;
+      height: 450px;
+
+      form {
+        gap: 10px;
+        font-size: 1rem;
+
+        .btn-socialMedia,
+        input,
+        #hr,
+        button {
+          width: 256px;
+          height: 36px;
+        }
+
+        input:focus {
+          border-width: 1px;
+        }
+
+        button {
+          width: 100%;
+          padding: 9px;
+        }
+        .link {
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}
