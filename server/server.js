@@ -3,10 +3,14 @@ const app = express();
 
 const mongoose = require("mongoose");
 const userRouter = require("./routers/userController");
+// const photoRouter = require("./routers/PhotoViewsRouter");
+
 require("dotenv").config();
 
 //SERVER HALI BERI ISHLAMIDI ENV FAYL OCHILMAGAN
 
+
+// Cammient ochib ishlatib ko'ring
 //midlleWare
 app.use(express.json());
 app.use((req, res, next) => {
@@ -19,6 +23,9 @@ app.use((req, res, next) => {
 
 
 app.use("/api/user", userRouter);
+
+
+// app.use("/api/photo", photoRouter);
 
 //Database-ga Ulanish
 /*  */

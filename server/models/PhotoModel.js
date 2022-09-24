@@ -9,3 +9,4 @@ const photoModelSchema = mongoose.Schema({
 });
 
 module.exports = mongoose.model("PhotoModel", photoModelSchema);
+
