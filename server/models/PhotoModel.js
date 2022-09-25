@@ -1,13 +1,9 @@
 const mongoose = require("mongoose");
 
 const photoModelSchema = mongoose.Schema({
-  
-  desc: String,
-    img:
-    {
-        data: Buffer,
-        contentType: String
-    },
+  url: String,
+  title: String,
+  userId: String,
   likes: 0,
   views: 0,
 });

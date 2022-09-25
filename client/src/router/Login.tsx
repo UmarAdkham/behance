@@ -13,7 +13,6 @@ function Login() {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log( user.email);
         
         setUser({ email: "", password: "" });
     };
@@ -28,7 +27,7 @@ function Login() {
                 <div className="login-container">
                     <form onSubmit={handleSubmit}>
                         <h2>Login</h2>
-                            {/* <input
+                            <input
                             type="email"
                             name="email"
                             value={user.email || ""}
@@ -41,7 +40,7 @@ function Login() {
                             value={user.password || ""}
                             placeholder="Enter your password"
                             onChange={handleChange}
-                        /> */}
+                        />
                         <button>Login</button>
                     </form>
                 </div>
