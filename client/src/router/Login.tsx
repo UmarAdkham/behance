@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+ import React, { useState } from "react";
 import { loginInterface } from "../interface/registerInterface";
 import '../style/login.scss'
 
@@ -17,8 +17,9 @@ function Login() {
         setUser({ email: "", password: "" });
     };
 
-    if (user.email === "admin" && user.password === "1234") {
+    if (user.email === "admin@gmail.com" && user.password === "1234") {
         // navigate('/main')
+        console.log('working');
     }
 
     return (
