@@ -3,7 +3,7 @@ const app = express();
 
 const mongoose = require("mongoose");
 const userRouter = require("./routers/userController");
-// const photoRouter = require("./routers/PhotoViewsRouter");
+const photoRouter = require("./routers/PhotoViewsRouter");
 
 require("dotenv").config();
 
@@ -20,12 +20,10 @@ app.use((req, res, next) => {
   next();
 });
 
-
-
 app.use("/api/user", userRouter);
 
 
-// app.use("/api/photo", photoRouter);
+app.use("/photo", photoRouter);
 
 //Database-ga Ulanish
 /*  */
