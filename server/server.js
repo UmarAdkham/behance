@@ -7,10 +7,6 @@ require("dotenv").config();
 
 //SERVER HALI BERI ISHLAMIDI ENV FAYL OCHILMAGAN
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b556f2cfaba0c24ec8f79f5ff5792c7d4510f739
 //midlleWare
 app.use(express.json());
 app.use((req, res, next) => {
