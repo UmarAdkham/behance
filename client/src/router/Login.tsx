@@ -15,6 +15,8 @@ function Login() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setUser({ email: "", password: "" });
+        
+        
     };
 
     if (user.email === "admin@gmail.com" && user.password === "1234") {
