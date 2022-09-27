@@ -9,4 +9,8 @@ viewsRouter.put("/:id", views);
 
 const photoR = express.Router();
 
+<<<<<<< HEAD
 photoR.put("/:id", photoR);
+=======
+module.exports = viewsRouter
+>>>>>>> master

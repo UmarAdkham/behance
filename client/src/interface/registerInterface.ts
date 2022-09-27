@@ -9,5 +9,5 @@ export interface registerInterface {
 
 export interface loginInterface {
     email: string,
-    password: string
+    parol: string
 }
