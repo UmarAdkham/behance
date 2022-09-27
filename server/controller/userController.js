@@ -21,6 +21,7 @@ const register = async (req, res) => {
     res.status(200).json(newStudent);
   } catch (error) {
     console.log(error);
+
     if (error.code === 11000) {
       res.json({ xat: "Mavjud email kiritdingiz" });
     } else {
@@ -30,6 +31,7 @@ const register = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
+
 const edit = async (req, res) => {
   const { ism, parol } = req.body;
   console.log("first");
