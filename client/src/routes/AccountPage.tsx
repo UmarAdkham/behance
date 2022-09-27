@@ -1,5 +1,4 @@
-import userEvent from "@testing-library/user-event";
-import React, { useRef } from "react";
+import React from "react";
 import '../style/account-page.scss'
 function AccountPage() {
   const loadFile = function (event: React.ChangeEvent<HTMLInputElement>) {
