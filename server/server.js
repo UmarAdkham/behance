@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require('cors')
 const mongoose = require("mongoose");
+const viewsRouter = require("./routers/PhotoViewsRouter");
 const userRouter = require("./routers/userController");
 require("dotenv").config();
 
@@ -21,6 +22,7 @@ app.use((req, res, next) => {
 
 
 app.use("/api/user", userRouter);
+app.use('/api/photo', viewsRouter)
 
 //Database-ga Ulanish
 /*  */

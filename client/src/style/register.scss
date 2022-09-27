@@ -1,67 +1,61 @@
-.otaDiv{
+.otaDiv {
     width: 500px;
     height: 550px;
     // background-color: red;
     display: flex;
     justify-content: center;
     -webkit-box-shadow: 4px 4px 25px 0px rgba(34, 60, 80, 0.2);
--moz-box-shadow: 4px 4px 25px 0px rgba(34, 60, 80, 0.2);
-box-shadow: 4px 4px 25px 0px rgba(34, 60, 80, 0.2);
-
+    -moz-box-shadow: 4px 4px 25px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 25px 0px rgba(34, 60, 80, 0.2);
 }
-.bolaDiv1{
-text-align: center;
-form{
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    height: 60%;
-   
-
-    
-
-
-    
-    label{
-        width: 80%;
+.bolaDiv1 {
+    text-align: center;
+    form {
+        position: relative;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        text-align: left;
-        input{
-            background: none;
-            border-style:none none solid none ;  
-            height: 28px;
+        align-items: center;
+        gap: 15px;
+        height: 60%;
+
+        label {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            input {
+                background: none;
+                border-style: none none solid none;
+                height: 28px;
+            }
+
+            input:focus {
+                outline: none;
+                border-bottom: 2px solid rgb(0, 191, 255);
+            }
         }
 
-        input:focus{
-            outline: none;
-            border-bottom: 2px solid rgb(0, 191, 255);
+        div {
+            width: 80%;
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            position: absolute;
+            width: 110px;
+            height: 32px;
+            border-radius: 14px;
+            background-color: rgb(0, 191, 255);
+            color: white;
+            right: 10%;
+            bottom: 20%;
+            border: none;
         }
     }
-
-    div{
-        width: 80%;
-        display: flex;
-        gap: 10px;
-    }
-     
-    button{
-        position: absolute;
-        width: 110px;
-        height: 32px;
-        border-radius: 14px;
-        background-color: rgb(0, 191, 255);
-        color: white;
-        right: 10%;
-        bottom: 20%;
-        border: none;
-    }
 }
-}
-.boshlagichQadam{
+.boshlagichQadam {
     text-align: left;
     margin-left: 50px;
 }
