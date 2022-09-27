@@ -1,9 +1,7 @@
-const express = require('express');
-const { login, register , edit } = require('../controller/userController');
+const express = require("express");
+const { login, register, edit } = require("../controller/userController");
 
-
-const userRouter = express.Router()
-
+const userRouter = express.Router();
 
 //BU REGISTER KANTROLLERI
 userRouter.post("/register", register);
@@ -11,16 +9,12 @@ userRouter.post("/register", register);
 /**
  * LOGIN KANTROLLER
  */
-userRouter.post('/login', login)
-
+userRouter.post("/login", login);
 
 /**
  * EDIT USERNAME AND PASSWORD
  */
 
-userRouter.put('/:id' , edit)
+userRouter.put("/:id", edit);
 
-
-
-
-module.exports = userRouter
+module.exports = userRouter;
