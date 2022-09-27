@@ -6,7 +6,7 @@ const login = async (req, res) => {
 
   try {
     const newStudent = await User.findOne({ email, parol });
-    res.status(200).json(newStudent);
+    res.status(200).json({ id: newStudent._id });
   } catch (error) {
     console.log(error);
     res.status(400).json({ error: error.message });
