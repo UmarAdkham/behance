@@ -13,7 +13,6 @@ const login = async (req, res) => {
   }
 };
 
-
 const register = async (req, res) => {
   const { ism, familiya, email, parol } = req.body;
 
@@ -22,6 +21,13 @@ const register = async (req, res) => {
     res.status(200).json(newStudent);
   } catch (error) {
     console.log(error);
+
+    if (error.code === 11000) {
+      res.json({ xat: "Mavjud email kiritdingiz" });
+    } else {
+      res.json({ xat: "Registerda xatolik yuz berdi" });
+    }
+
     res.status(400).json({ error: error.message });
   }
 };
