@@ -23,12 +23,10 @@ const register = async (req, res) => {
     console.log(error);
 
     if (error.code === 11000) {
-      res.json({ xat: "Mavjud email kiritdingiz" });
+      res.json({ error: "Mavjud email kiritdingiz" });
     } else {
-      res.json({ xat: "Registerda xatolik yuz berdi" });
+      res.json({ error: "Registerda xatolik yuz berdi" });
     }
-
-    res.status(400).json({ error: error.message });
   }
 };
 

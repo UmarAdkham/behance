@@ -15,6 +15,9 @@ function Register() {
     parol: "",
   });
 
+
+  // inputlardan xosil bolayotgan object
+
   const handelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setRegister({ ...regitesr, [e.target.name]: e.target.value });
   };
@@ -22,13 +25,19 @@ function Register() {
 
   const handelSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    axios.post('http://localhost:5000/api/user/register', regitesr).then((res) => {
-      naviget('/')
-    }).catch((e) => {
-      console.log(e);
-
-      // setXat(e.data.xat)
-    })
+    axios
+      .post('http://localhost:5000/api/user/register', regitesr)
+      .then((res: any) => {
+        if (res.data.error) {
+          //  apidan kelgan xatolikn ekranga chiqarish
+          setXat(res.data.error)
+        }
+        else {
+          naviget('/')
+          // apidan kelgan xatolikn ekranga chiqarishni boshatish
+          setXat('')
+        }
+      })
   }
 
   return (

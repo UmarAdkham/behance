@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./router/Login";
+import Login from "./routes/Login";
 import AccountPage from "./routes/AccountPage";
 import Register from "./routes/Register";
-import './style/account-page.scss'
+
 
 function App() {
   return (
