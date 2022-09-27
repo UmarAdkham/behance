@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AccountPage from "./router/AccountPage";
 import Login from "./router/Login";
-import Register from "./router/Register";
+import AccountPage from "./routes/AccountPage";
+import Register from "./routes/Register";
 import './style/account-page.scss'
 
 function App() {
