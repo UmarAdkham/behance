@@ -26,6 +26,7 @@
             text-align: center;
             color: #fff;
             // line-height: 30px;
+
         }
     }
 
@@ -45,17 +46,20 @@
         // border: 1px solid red;
         text-align: center;
         line-height: 50px;
-        
-        button{
+        position: absolute;
+        top: 30%;
+
+        button {
             width: 298px;
             height: 38px;
-            background:#0057ff;
+            background: #0057ff;
             border: none;
             border-radius: 28px;
             color: #fff;
             margin: auto;
             cursor: pointer;
         }
+
         .user-photo-profile {
             width: 120px;
             height: 120px;
@@ -63,27 +67,29 @@
             margin: auto;
             // margin-top: 30px;
         }
-        .user-photo-profile img{
+
+        .user-photo-profile img {
             width: 100%;
             height: 100%;
             border-radius: 50%;
         }
-        .adobe-portfolio{
+
+        .adobe-portfolio {
             width: 298px;
             height: 38px;
-            background:#fff;
-            border:1px solid rgb(211, 208, 208);
+            background: #fff;
+            border: 1px solid rgb(211, 208, 208);
             border-radius: 28px;
             color: #111;
             margin: auto;
             display: flex;
-            justify-content: center; 
-            align-items: center; 
-            margin-top: 2px;    
-            cursor: pointer;     
+            justify-content: center;
+            align-items: center;
+            margin-top: 2px;
+            cursor: pointer;
         }
 
-        .nanyat{
+        .nanyat {
             width: 298px;
             height: 250px;
             border: 1px solid rgb(222, 221, 221);
@@ -92,7 +98,42 @@
             border-radius: 5px;
         }
     }
-     
+
+    .uploat_img {
+        position: absolute;
+        left: 40%;
+
+        .img_container {
+            margin: 20px;
+            width: 40vh;
+            height: 40vh;
+            border: dotted;
+            text-align: center;
+            input{
+                margin: auto;
+                padding-left: 60px;
+            }
+            .icon {
+                width: 90px;
+                background-color: hsl(220, 71%, 56%);
+                filter: blur(10);
+                margin: auto;
+                height: 90px;
+                position: relative;
+                text-align: center;
+                border-radius: 50%;
+                margin-top: 30px;
+
+                img {
+                    width: 40px;
+                    margin: 25px;
+
+
+                }
+            }
+        }
+    }
+
 
 
 
@@ -103,13 +144,16 @@
         .add-photo-banner {
             height: 176px;
         }
+
         .upload-photo {
             display: none;
-        } 
-        .user-photo-profile{
-          position: relative;
-          top: -90px;
         }
+
+        .user-photo-profile {
+            position: relative;
+            top: -90px;
+        }
+
         .user-data {
             width: 100%;
             height: auto;
@@ -119,27 +163,31 @@
             position: relative;
             left: 0;
             top: 0;
-            
+
             // 8600020377342584
             .user-photo-profile {
                 border: 10px solid white;
             }
-            .h2pb{
+            .h2pb {
+                // border: 3px solid green;
                 position: relative;
                 top: -72px;
             }
-            button{
+
+            button {
                 width: 90%;
             }
-            .adobe-portfolio{
+
+            .adobe-portfolio {
                 display: none;
             }
         }
 
     }
+
     @media (max-width:686px) {
         .add-photo-banner {
-            height:146px;
+            height: 146px;
         }
     }
 }

@@ -1,5 +1,6 @@
 import React from "react";
-import '../style/account-page.scss'
+import "../style/account-page.scss";
+import Uploat from "./Uploat";
 function AccountPage() {
   const loadFile = function (event: React.ChangeEvent<HTMLInputElement>) {
     // let image = document.getElementById("output");
@@ -29,11 +30,16 @@ function AccountPage() {
           <h2>Добавить изображение баннера.</h2>
           <h4>Оптимальный размеры 3200 x 410px</h4>
         </div>
+        
       </div>
+    
 
       <div className="user-data">
         <div className="user-photo-profile">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"  alt="404-user-photo" />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"
+            alt="404-user-photo"
+          />
         </div>
         <div className="h2pb">
           <h2>Sanjarbek Urolov</h2>
@@ -46,23 +52,22 @@ function AccountPage() {
           </div>
         </div>
 
-         <div className="nanyat">
-            <h3>Nanyat</h3>
-            <hr style={{width:'285px'}} />
-            <h4>Ищете возможности?</h4>
-            <p>Добавьте новый раздел «Нанять», чтобы сообщить посетителям, что вы ищете новые возможности для обеспечения занятости.</p>
-         </div>
-
+        <div className="nanyat">
+          <h3>Nanyat</h3>
+          <hr style={{ width: "285px" }} />
+          <h4>Ищете возможности?</h4>
+          <p>
+            Добавьте новый раздел «Нанять», чтобы сообщить посетителям, что вы
+            ищете новые возможности для обеспечения занятости.
+          </p>
+        </div>
       </div>
+      <Uploat/>
     </div>
   );
 }
 
 export default AccountPage;
-
-
-
-
 
 {
   /* <label htmlFor="aaa">
