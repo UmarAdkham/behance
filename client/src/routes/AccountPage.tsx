@@ -1,5 +1,4 @@
 import React from "react";
-import Account_app from "../accountComponent/Account_app";
 import "../style/account-page.scss";
 
 import "../style/account-page.scss";
@@ -60,40 +59,13 @@ function AccountPage() {
           <div className="adobe-portfolio">
             <h3>Опробовать Adobe Portfolio</h3>
           </div>
-
-          {/* <div className="h2pb">
-            <h2>Sanjarbek Urolov</h2>
-            <p>Uzbekistan</p>
-            <button>
-              <h3>Редактировать профиль</h3>
-            </button>
-            <button className="adobe-portfolio">
-              <h3>Опробовать Adobe Portfolio</h3>
-            </button>
-          </div> */}
-
-          {/* <div className="nanyat">
-            <h4>Нанять</h4>
-            <hr/>
-            <h4 className="h4">Ищете возможности?</h4>
-            <p>
-              Добавьте новый раздел «Нанять», чтобы сообщить посетителям, что вы
-              ищете новые возможности для обеспечения занятости.
-            </p>
-            <button id="btn">
-              Изменить доступность
-            </button>
-          </div>
-            <p>{vaqt}</p> */}
-
-
         </div>
       </div>
 
       <div className="container-for-uploading-images">
 
        <div className="nav-bar">
-         <Account_app/>
+         {/* <Account_app/> */}
        </div>
        <div className="images-container">
 
