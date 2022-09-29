@@ -6,8 +6,10 @@
 
 .account-page {
     width: 100%;
-    height: 100vh;
+    height: auto;
     background: #f9f9f9;
+    // display: flex;
+    // flex-direction: row;
 
     .add-photo-banner {
         width: 100%;
@@ -42,10 +44,13 @@
         position: relative;
         left: 50px;
         top: -150px;
+        display: flex;
+        justify-content: center;
         border-radius: 5px;
         // border: 1px solid red;
         text-align: center;
         line-height: 50px;
+
 
         button {
             width: 298px;
@@ -111,6 +116,8 @@
                 margin: auto;
                 padding-left: 60px;
             }
+          
+          
             .icon {
                 width: 90px;
                 background-color: hsl(220, 71%, 56%);
@@ -156,6 +163,52 @@
             left: 0;
             top: 0;
 
+            .user-data-ichki-div {
+
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+                left: 0;
+                top: 0;
+
+                // 8600020377342584
+                .user-photo-profile {
+                    border: 10px solid white;
+                }
+
+                .h2pb {
+                    position: relative;
+                    top: -72px;
+
+                }
+
+                button {
+                    width: 95%;
+                    margin: 10px;
+                }
+
+                .adobe-portfolio {
+                    display: none;
+                }
+
+                hr {
+                    width: 100%;
+                }
+
+                .nanyat {
+                    width: 95%;
+                    height: auto;
+                    margin: auto;
+                    position: relative;
+                    top: -75px;
+
+                    button {
+                        width: 95%;
+                    }
+                }
             // 8600020377342584
             .user-photo-profile {
                 border: 10px solid white;
@@ -174,6 +227,7 @@
                 display: none;
             }
         }
+
 
     }
 
