@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-
+import  '../style/main.scss'
 const liker = require("../images/thumb-up-fill.png");
 
 const close = require("../images/close-line.png");
