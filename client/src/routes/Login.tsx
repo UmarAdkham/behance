@@ -4,10 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../hook/hook";
 import { loginInterface } from "../interface/registerInterface";
 import { setUserId } from "../redux/userIdSlise";
-import google from "../img/google.svg"
-import apple from "../img/apple.svg"
-import facebook from "../img/facebook.png"
-import '../style/login.scss';
+import google from "../images/google.svg"
+import apple from "../images/apple.png"
+import facebook from  "../images/facebook.png"
+import '../style/login.scss'
 
 function Login() {
     let naviget = useNavigate()
@@ -71,7 +71,7 @@ function Login() {
                                 onChange={handleChange}
                             />
 
-                            <p className="link">Ro'yxatdan hali ham o'tmaganmisiz ? <Link to={'/register'} >Register</Link></p>
+                            <p className="link">Ro'yxatdan hali ham o'tmaganmisiz ? <Link to={'/register'} >Ro'yxatdan o'ting</Link></p>
                             <p style={{ textAlign: 'center' }} >{text}</p>
                             <button>Login</button>
                         </form>
