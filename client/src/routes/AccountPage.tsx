@@ -1,5 +1,7 @@
 import React from "react";
 import "../style/account-page.scss";
+
+import "../style/account-page.scss";
 import Uploat from "./Uploat";
 function AccountPage() {
   const loadFile = function (event: React.ChangeEvent<HTMLInputElement>) {
@@ -7,7 +9,7 @@ function AccountPage() {
     // let useref=useRef<HTMLInputElement>(null)
     // useref.current.src = URL.createObjectURL(event.target.files[0]);
   };
-
+  let vaqt=new Date().toLocaleString();
   return (
     <div className="account-page">
       <div className="add-photo-banner">
@@ -35,6 +37,13 @@ function AccountPage() {
     
 
       <div className="user-data">
+        <div className="user-data-ichki-div">
+
+          <div className="user-photo-profile">
+            <img
+              src="https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxR64uyGyLI8KN82xvbGA9UXg"
+              alt="404-user-photo"
+            />
         <div className="user-photo-profile">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"
@@ -51,6 +60,18 @@ function AccountPage() {
             <h3>Опробовать Adobe Portfolio</h3>
           </div>
         </div>
+      </div>
+
+      <div className="container-for-uploading-images">
+
+       <div className="nav-bar">
+         {/* <Account_app/> */}
+       </div>
+       <div className="images-container">
+
+       </div>
+      </div>
+
 
         <div className="nanyat">
           <h3>Nanyat</h3>
@@ -64,20 +85,10 @@ function AccountPage() {
       </div>
       <Uploat/>
     </div>
+    </div>
   );
 }
 
 export default AccountPage;
 
-{
-  /* <label htmlFor="aaa">
-          <img
-            style={{ borderRadius: "50%" }}
-            src="https://thumbs.dreamstime.com/z/%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%BA%D0%B0-%D0%B2%D0%BD%D0%B8%D0%B7-%D1%81-%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8-%D0%BD%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%BA%D0%B8-%D0%B7%D0%BD%D0%B0%D1%87%D0%BA%D0%BE%D0%B2-189931526.jpg"
-            alt="404-img-strelka"
-            width={50}
-            height={50}
-          /> 
-          </label>
-          <input type="file" id="aaa" style={{display:"none"}}/> */
-}
+
