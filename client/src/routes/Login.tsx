@@ -7,7 +7,7 @@ import { setUserId } from "../redux/userIdSlise";
 import google from "../img/google.svg"
 import apple from "../img/apple.svg"
 import facebook from "../img/facebook.png"
-import '../style/login.scss'
+import '../style/login.scss';
 
 function Login() {
     let naviget = useNavigate()
@@ -52,9 +52,9 @@ function Login() {
                     <div className="login-container">
                         <form onSubmit={handleSubmit}>
                             <h2>Login</h2>
-                            <p className="btn-socialMedia btn-google"> <img src={google} alt="404"       width={30} /> Google orqali kirish</p>
-                            <p className="btn-socialMedia btn-facebook"> <img src={facebook} alt="404"   width={30} /> Facebook Orqali kirish</p>
-                            <p className="btn-socialMedia btn-apple"> <img src={apple} alt="404"         width={30} /> Apple orqali kirish</p>
+                            <p className="btn-socialMedia btn-google"> <img src={google} alt="404" width={30} /> Google orqali kirish</p>
+                            <p className="btn-socialMedia btn-facebook"> <img src={facebook} alt="404" width={30} /> Facebook Orqali kirish</p>
+                            <p className="btn-socialMedia btn-apple"> <img src={apple} alt="404" width={30} /> Apple orqali kirish</p>
                             <p id="hr">-----------------yoki-------------------</p>
                             <input
                                 type="email"
