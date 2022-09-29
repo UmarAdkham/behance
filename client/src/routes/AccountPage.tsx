@@ -30,9 +30,7 @@ function AccountPage() {
           <h2>Добавить изображение баннера.</h2>
           <h4>Оптимальный размеры 3200 x 410px</h4>
         </div>
-        
       </div>
-    
 
       <div className="user-data">
         <div className="user-photo-profile">
@@ -62,7 +60,7 @@ function AccountPage() {
           </p>
         </div>
       </div>
-      <Uploat/>
+      <Uploat />
     </div>
   );
 }
