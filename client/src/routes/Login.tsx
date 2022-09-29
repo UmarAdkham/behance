@@ -71,7 +71,7 @@ function Login() {
                                 onChange={handleChange}
                             />
 
-                            <p className="link">Ro'yxatdan hali ham o'tmaganmisiz ? <Link to={'/register'} >Register</Link></p>
+                            <p className="link">Ro'yxatdan hali ham o'tmaganmisiz ? <Link to={'/register'} >Ro'yxatdan o'ting</Link></p>
                             <p style={{ textAlign: 'center' }} >{text}</p>
                             <button>Login</button>
                         </form>
