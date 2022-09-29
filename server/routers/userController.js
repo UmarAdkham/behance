@@ -1,5 +1,5 @@
 const express = require("express");
-const { login, register, edit, photoEdit } = require("../controller/userController");
+const { login, register, edit, photoedit } = require("../controller/userController");
 
 const userRouter = express.Router();
 
@@ -21,6 +21,6 @@ userRouter.put("/:id", edit);
 /**
  * EDIT PHOTO OF USER
  */
-userRouter.put("./:id/photoedit", photoEdit);
+userRouter.put("./:id/photoedit", photoedit);
 
 module.exports = userRouter;
