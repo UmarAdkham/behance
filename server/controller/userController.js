@@ -61,7 +61,7 @@ const edit = async (req, res) => {
  * EDIT USER PHOTO 
  * EDIT USER PHOTO 
  */
-const photoEdit = async (req, res) =>{
+const photoedit = async (req, res) =>{
   const {profilRasmi} = req.body;
   console.log('===================FIRST=================');
  try {
@@ -79,4 +79,4 @@ const photoEdit = async (req, res) =>{
 }
 }
 
-module.exports = { login, register, edit, photoEdit };
+module.exports = { login, register, edit, photoedit };
