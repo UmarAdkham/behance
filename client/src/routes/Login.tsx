@@ -5,7 +5,7 @@ import { useAppDispatch } from "../hook/hook";
 import { loginInterface } from "../interface/registerInterface";
 import { setUserId } from "../redux/userIdSlise";
 import google from "../img/google.svg"
-import apple from "../img/apple.png"
+import apple from "../img/apple.svg"
 import facebook from "../img/facebook.png"
 import '../style/login.scss'
 
@@ -52,9 +52,9 @@ function Login() {
                     <div className="login-container">
                         <form onSubmit={handleSubmit}>
                             <h2>Login</h2>
-                            <p className="btn-socialMedia btn-google"> <img src={google} alt="404" width={20} height={20} /> Google orqali kirish</p>
-                            <p className="btn-socialMedia btn-facebook"> <img src={facebook} alt="404" width={20} height={20} /> Facebook Orqali kirish</p>
-                            <p className="btn-socialMedia btn-apple"> <img src={apple} alt="404" width={20} height={20} /> Apple orqali kirish</p>
+                            <p className="btn-socialMedia btn-google"> <img src={google} alt="404"       width={30} /> Google orqali kirish</p>
+                            <p className="btn-socialMedia btn-facebook"> <img src={facebook} alt="404"   width={30} /> Facebook Orqali kirish</p>
+                            <p className="btn-socialMedia btn-apple"> <img src={apple} alt="404"         width={30} /> Apple orqali kirish</p>
                             <p id="hr">-----------------yoki-------------------</p>
                             <input
                                 type="email"
