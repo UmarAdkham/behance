@@ -19,10 +19,10 @@ const login = async (req, res) => {
 };
 
 const register = async (req, res) => {
-  const { ism, familiya, email, parol } = req.body;
+  const { ism, familiya, email, parol , profilRasmi } = req.body;
 
   try {
-    const newStudent = await User.create({ ism, familiya, email, parol });
+    const newStudent = await User.create({ ism, familiya, email, parol , profilRasmi});
     res.status(200).json(newStudent);
   } catch (error) {
     console.log(error);
