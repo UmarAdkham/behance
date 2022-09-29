@@ -13,6 +13,7 @@ function Register() {
     familiya: "",
     ism: "",
     parol: "",
+    profilRasmi:'https://a5.behance.net/6ea9aa767d8e4bfd4c34068586c9b76450edbdc7/img/profile/no-image-138.png?cb=264615658',
   });
 
 
