@@ -5,7 +5,7 @@ import { useAppDispatch } from "../hook/hook";
 import { loginInterface } from "../interface/registerInterface";
 import { setUserId } from "../redux/userIdSlise";
 import google from "../img/google.svg"
-import apple from "../img/apple.svg"
+import apple from "../img/apple.png"
 import facebook from "../img/facebook.png"
 import '../style/login.scss'
 
