@@ -34,7 +34,6 @@ function AccountPage() {
         </div>
       </div>
 
-
       <div className="user-data">
         <div className="user-data-ichki-div">
             <div className="user-photo-profile">

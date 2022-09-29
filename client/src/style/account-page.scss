@@ -51,123 +51,6 @@
         text-align: center;
         line-height: 50px;
 
-        .user-data-ichki-div {
-            width: 340px;
-            height: 645px;
-            background: #fff;
-            border-radius: 5px;
-            // border: 1px solid green;
-            margin-top: 30px;
-
-            p {
-                margin: 6px;
-            }
-
-            button {
-                width: 298px;
-                height: 38px;
-                background: #0057ff;
-                border: none;
-                border-radius: 28px;
-                color: #fff;
-                // margin: auto;
-                cursor: pointer;
-                padding: 8px 0;
-            }
-
-            .user-photo-profile {
-                width: 110px;
-                height: 110px;
-                border-radius: 50%;
-                margin: auto;
-            }
-
-            .user-photo-profile img {
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-            }
-
-            .adobe-portfolio {
-                width: 298px;
-                height: 38px;
-                background: #fff;
-                border: 1px solid rgb(211, 208, 208);
-                border-radius: 28px;
-                color: #111;
-                margin-top: 2px;
-                cursor: pointer;
-            }
-
-            .nanyat {
-                width: 298px;
-                height: 260px;
-                border: 1px solid rgb(222, 221, 221);
-                margin: auto;
-                margin-top: 35px;
-                border-radius: 5px;
-                line-height: 20px;
-
-                button {
-                    width: 90%;
-                    color: #0057ff;
-                    background-color: #f5f8ff;
-                    font-size: 16px;
-                    transition: .3s linear;
-                    margin-top: 25px;
-                }
-
-                h4 {
-                    text-align: start;
-                    padding: 8px 0 8px 15px;
-                }
-
-                .h4 {
-                    padding: 14px;
-                    // margin-top: 8px;
-                }
-
-                p {
-                    padding-left: 10px;
-                    text-align: left;
-                }
-
-                button:hover {
-                    background-color: #dbdfe7;
-                }
-            }
-        }
-
-
-    }
-
-    .container-for-uploading-images {
-        width: 72%;
-        height: 100vh;
-        border: 2px solid yellow;
-        float: right;
-        position: relative;
-        top: -680px;
-
-
-        .nav-bar {
-            width: 100%;
-            height: 60px;
-            border: 2px solid green;
-            width: 100%;
-        }
-
-        .images-container {
-          width: 90%;
-          height: 90vh;
-          border: 2px solid red;
-        }
-
-    }
-
-
-        position: absolute;
-        top: 30%;
 
         button {
             width: 298px;
@@ -255,12 +138,6 @@
             }
         }
     }
-
-
-
-
-
-
 
     @media (max-width:1200px) {
         .add-photo-banner {
