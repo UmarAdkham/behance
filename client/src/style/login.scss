@@ -50,7 +50,12 @@
       flex-direction: column;
       gap: 20px;
       font-size: 1.3rem;
-
+      
+      p{
+        width: 100%;
+        display: flex;
+        gap: 5px;
+      }
       .btn-socialMedia,
       input,
       #hr,
