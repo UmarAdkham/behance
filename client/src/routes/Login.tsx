@@ -4,9 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../hook/hook";
 import { loginInterface } from "../interface/registerInterface";
 import { setUserId } from "../redux/userIdSlise";
-import google from "../img/google.svg"
-import apple from "../img/apple.png"
-import facebook from "../img/facebook.png"
+import google from "../images/google.svg"
+import apple from "../images/apple.png"
+import facebook from  "../images/facebook.png"
 import '../style/login.scss'
 
 function Login() {
