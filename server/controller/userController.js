@@ -39,7 +39,7 @@ const edit = async (req, res) => {
   const { ism, parol } = req.body;
   console.log("first");
   console.log(req.params.id);
-  try {
+  try {  
     User.findOneAndUpdate(
       { _id: req.params.id },
       { ism, parol },
@@ -54,4 +54,29 @@ const edit = async (req, res) => {
   }
 };
 
-module.exports = { login, register, edit };
+
+
+/**
+ * 
+ * EDIT USER PHOTO 
+ * EDIT USER PHOTO 
+ */
+const photoEdit = async (req, res) =>{
+  const {profilRasmi} = req.body;
+  console.log('===================FIRST=================');
+ try {
+   User.findOneAndUpdate(
+    {_id:req.params.id},
+    {profilRasmi},
+    {new:true},
+    (err, updatedPhoto) => {
+      if (!err) res.json(updatedPhoto);
+      else res.json({ error: err.message });
+    }
+   )
+ }catch (error) {
+  console.log(error);
+}
+}
+
+module.exports = { login, register, edit, photoEdit };
