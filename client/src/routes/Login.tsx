@@ -24,7 +24,7 @@ function Login() {
         axios.post('http://localhost:5000/api/user/login', user).then((res: any) => {
             console.log(res);
 
-            if (res.status == 200) {
+            if (res.status === 200) {
                 dispatch(setUserId(res.data.id))
                 naviget('/accountPage')
             } else {
@@ -49,26 +49,26 @@ function Login() {
                     <div className="login-container">
                         <form onSubmit={handleSubmit}>
                             <h2>Login</h2>
-                            <p className="btn-socialMedia btn-google">Continue with Google</p>
-                            <p className="btn-socialMedia btn-facebook">Continue with Facebook</p>
-                            <p className="btn-socialMedia btn-apple">Continue with Apple</p>
-                            <p id="hr">-----------------or-------------------</p>
+                            <p className="btn-socialMedia btn-google">Google orqali kirish</p>
+                            <p className="btn-socialMedia btn-facebook">Facebook Orqali kirish</p>
+                            <p className="btn-socialMedia btn-apple">Apple orqali kirish</p>
+                            <p id="hr">-----------------yoki-------------------</p>
                             <input
                                 type="email"
                                 name="email"
                                 value={user.email || ""}
-                                placeholder="Enter your email"
+                                placeholder="Emailingizni kiriting"
                                 onChange={handleChange}
                             />
                             <input
                                 type="password"
                                 name="parol"
                                 value={user.parol || ""}
-                                placeholder="Enter your password"
+                                placeholder="Parolingizni kiriting"
                                 onChange={handleChange}
                             />
 
-                            <p className="link">Don't have an account yet ? <Link to={'/register'} >Register</Link></p>
+                            <p className="link">Ro'yxatdan hali ham o'tmaganmisiz ? <Link to={'/register'} >Register</Link></p>
                             <p style={{ textAlign: 'center' }} >{text}</p>
                             <button>Login</button>
                         </form>
