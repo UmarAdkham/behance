@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import  '../style/main.scss'
+import {TbMessageCircle } from "react-icons/tb";
+import "../style/main.scss";
 const liker = require("../images/thumb-up-fill.png");
 
 const close = require("../images/close-line.png");
@@ -12,6 +13,7 @@ function Main() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [displayModal, setDisplayModal] = useState(false)
   const style = {
     position: "absolute",
     top: "50%",
@@ -22,8 +24,12 @@ function Main() {
     border: "none",
     // bgcolor: "red",
   };
+
+  const handleClick= () =>{
+   setDisplayModal(!displayModal)
+  }
   return (
-    <div>
+    <div className="mainSec">
       {/* <Button >Open modal</Button> */}
       <img
         src={
@@ -60,6 +66,22 @@ function Main() {
       App
       {/* <Modal/> */}
       <h1>salom</h1>
+
+      <div className="modal">
+
+         <div className="circle" onClick={ handleClick}>
+          <span><TbMessageCircle/></span>
+         </div>
+
+        <form style={{display:displayModal ? "flex": "none"}}>
+          <input type="email" placeholder="emailingizni kiriting" />
+          <textarea>
+            Test
+          </textarea>
+        </form>
+      </div>
+
+
     </div>
   );
 }
