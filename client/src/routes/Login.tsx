@@ -1,12 +1,18 @@
+import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../hook/hook";
 import { loginInterface } from "../interface/registerInterface";
+import { setUserId } from "../redux/userIdSlise";
 import '../style/login.scss'
 
 function Login() {
+    let naviget = useNavigate()
+    let dispatch = useAppDispatch()
+    let [text, setText] = useState('')
     const [user, setUser] = useState<loginInterface>({
         email: "",
-        password: ""
+        parol: ""
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -15,10 +21,20 @@ function Login() {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setUser({ email: "", password: "" });
+        axios.post('http://localhost:5000/api/user/login', user).then((res: any) => {
+            console.log(res);
+
+            if (res.status == 200) {
+                dispatch(setUserId(res.data.id))
+                naviget('/accountPage')
+            } else {
+                setText('password yoki user name xato')
+            }
+        })
+        setUser({ email: "", parol: "" });
     };
 
-    if (user.email === "admin@gmail.com" && user.password === "1234") {
+    if (user.email === "admin@gmail.com" && user.parol === "1234") {
         // navigate('/main')
         console.log('working');
     }
@@ -46,14 +62,17 @@ function Login() {
                             />
                             <input
                                 type="password"
-                                name="password"
-                                value={user.password || ""}
+                                name="parol"
+                                value={user.parol || ""}
                                 placeholder="Enter your password"
                                 onChange={handleChange}
                             />
+
                             <p className="link">Don't have an account yet ? <Link to={'/register'} >Register</Link></p>
+                            <p style={{ textAlign: 'center' }} >{text}</p>
                             <button>Login</button>
                         </form>
+
                     </div>
                 </div>
             </div>
