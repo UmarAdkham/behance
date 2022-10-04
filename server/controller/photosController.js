@@ -1,16 +1,13 @@
 const Photos = require("../models/PhotoModel")
 
-
-const getPhotos = async (req, res) => {
-  try {
-    const photos = await Photos.find({})
-    res.status(200).json(photos)
-  } catch (error) {
-    res.status(404).json({ error: "Error api" })
-    console.log('====================================');
-    console.log(error);
-    console.log('====================================');
-  }
+const getPhotos = async (req ,res)=>{
+    try {
+        const photos = await Photos.find({})
+        res.status(200).json(photos)
+    } catch (error) {
+        res.status(404).json({error:"Error api"})
+        console.log(error);
+    }
 }
 
 const upload = async (req, res) => {
