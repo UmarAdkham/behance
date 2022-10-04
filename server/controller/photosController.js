@@ -1,13 +1,13 @@
 const Photos = require("../models/PhotoModel")
 
-const getPhotos = async (req ,res)=>{
-    try {
-        const photos = await Photos.find({})
-        res.status(200).json(photos)
-    } catch (error) {
-        res.status(404).json({error:"Error api"})
-        console.log(error);
-    }
+const getPhotos = async (req, res) => {
+  try {
+    const photos = await Photos.find({})
+    res.status(200).json(photos)
+  } catch (error) {
+    res.status(404).json({ error: "Error api" })
+    console.log(error);
+  }
 }
 
 const upload = async (req, res) => {
@@ -21,6 +21,7 @@ const upload = async (req, res) => {
   }
 };
 
+// put rasimni korilganlar sonini oshirish
 
 const views = async (request, respose) => {
   Photos.findByIdAndUpdate(
@@ -37,10 +38,15 @@ const views = async (request, respose) => {
   );
 };
 
-
+// post userga tegishlik rasimlarni olish 
+const getUserPhotos = async (request, response) => {
+  Photos.find({ userId: request.body.userId }, (error, res) => {
+    error ? response.send({ error: error.message }) : response.send(res)
+  })
+}
 
 
 
 module.exports = {
-  getPhotos, upload, views,
+  getPhotos, upload, views, getUserPhotos,
 }
