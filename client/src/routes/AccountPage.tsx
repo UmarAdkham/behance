@@ -1,7 +1,7 @@
 import React from "react";
 import "../style/account-page.scss";
 import "../style/account-page.scss";
-import Uploat from "./Uploat";
+import Uploat from "./Upload";
 function AccountPage() {
   const loadFile = function (event: React.ChangeEvent<HTMLInputElement>) {
     // let image = document.getElementById("output");
@@ -70,8 +70,8 @@ function AccountPage() {
               ищете новые возможности для обеспечения занятости.
             </p>
           </div>
+          <Uploat/>
         </div>
-        <Uploat />
       </div>
   );
 }
