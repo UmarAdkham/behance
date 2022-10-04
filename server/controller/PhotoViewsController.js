@@ -1,4 +1,4 @@
-const Photo = require("../models/PhotoModel");
+const Photo = require("../models/photoModel");
 
 const views = async (request, respose) => {
   Photo.findByIdAndUpdate(

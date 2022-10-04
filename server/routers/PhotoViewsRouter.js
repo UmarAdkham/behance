@@ -1,5 +1,5 @@
 const express = require("express");
-const { views, uploat } = require("../controller/PhotoViewsController");
+const { views, uploat } = require("../controller/photoViewsController");
 
 const viewsRouter = express.Router();
 
