@@ -4,7 +4,8 @@ export interface registerInterface {
     email: string,
     ism: string,
     familiya: string,
-    parol: string
+    parol: string,
+    profilRasmi:string,
 }
 
 export interface loginInterface {

@@ -1,9 +1,10 @@
-const express = require("express");
+const express = require("express");``
 const app = express();
 const cors = require('cors')
 const mongoose = require("mongoose");
-const viewsRouter = require("./routers/PhotoViewsRouter");
-const userRouter = require("./routers/userController");
+
+const userRouter = require("./routers/userRouter");
+const photoRouter = require("./routers/PhotosRoutes")
 require("dotenv").config();
 
 
@@ -12,9 +13,9 @@ app.use(cors())
 
 
 
+
 //midlleWare
 app.use(express.json());
-
 app.use(express.json({limit: '50mb', extended: true}));
 app.use(express.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
 
@@ -29,7 +30,7 @@ app.use((req, res, next) => {
 
 
 app.use("/api/user", userRouter);
-app.use('/api/photo', viewsRouter)
+app.use("/api", photoRouter)
 
 //Database-ga Ulanish
 /*  */

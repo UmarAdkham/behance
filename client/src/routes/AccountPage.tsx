@@ -1,6 +1,5 @@
 import React from "react";
 import "../style/account-page.scss";
-
 import "../style/account-page.scss";
 import Uploat from "./Uploat";
 function AccountPage() {
