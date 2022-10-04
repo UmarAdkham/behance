@@ -15,18 +15,6 @@ const views = async (request, respose) => {
   );
 };
 
-const uploat = async (req, res) => {
-  const { url, title, userId } = req.body;
-  try {
-    const newUploat = await Photo.create({ url, title, userId });
-    res.status(200).json(newUploat);
-  } catch (error) {
-    console.log(error);
-    res.json({ error: "Katta xatoki" });
-  }
-};
-
 module.exports = {
   views,
-  uploat,
 };

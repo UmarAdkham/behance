@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import {TbMessageCircle } from "react-icons/tb";
 import "../style/main.scss";
 import axios from "axios";
+import EmailJs from "../components/EmailJs";
 const liker = require("../images/thumb-up-fill.png");
 
 const close = require("../images/close-line.png");
@@ -20,7 +18,7 @@ function Main() {
  
   };
   const handleClose = () => setOpen(false);
-  const [displayModal, setDisplayModal] = useState(false)
+
   const style = {
     position: "absolute",
     top: "50%",
@@ -32,9 +30,6 @@ function Main() {
     // bgcolor: "red",
   };
 
-  const handleClick= () =>{
-   setDisplayModal(!displayModal)
-  }
   return (
     <div className="mainSec">
       {/* <Button >Open modal</Button> */}
@@ -73,22 +68,7 @@ function Main() {
       App
       {/* <Modal/> */}
       <h1>salom</h1>
-
-      <div className="modal">
-
-         <div className="circle" onClick={ handleClick}>
-          <span><TbMessageCircle/></span>
-         </div>
-
-        <form style={{display:displayModal ? "flex": "none"}}>
-          <input type="email" placeholder="emailingizni kiriting" />
-          <textarea>
-            Test
-          </textarea>
-        </form>
-      </div>
-
-
+      <EmailJs />
     </div>
   );
 }
