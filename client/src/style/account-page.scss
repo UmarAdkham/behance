@@ -36,18 +36,25 @@
   }
 
   .user-data {
-    width: 360px;
-    height: 697px;
-    background: #fff;
+    width: 95%;
+    margin: auto;
+    height: 500px;
     position: relative;
-    left: 50px;
-    top: -150px;
+    top: -90px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     border-radius: 5px;
     // border: 1px solid red;
     text-align: center;
     line-height: 50px;
+    padding: 0 50px;
+
+    .user-data-ichki-div {
+      width: 350px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      padding: 50px 0;
+    }
 
     button {
       width: 298px;
@@ -89,13 +96,16 @@
       cursor: pointer;
     }
 
-    .nanyat {
-      width: 298px;
-      height: 250px;
-      border: 1px solid rgb(222, 221, 221);
-      margin: auto;
-      margin-top: 30px;
-      border-radius: 5px;
+    .nanyat{
+      position: relative;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 90px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
   }
 
