@@ -4,6 +4,9 @@ import Modal from "@mui/material/Modal";
 import "../style/main.scss";
 import axios from "axios";
 import EmailJs from "../components/EmailJs";
+import Header from '../components/Header'
+import Footer from "../components/Footer";
+
 const liker = require("../images/thumb-up-fill.png");
 
 const close = require("../images/close-line.png");
@@ -31,7 +34,9 @@ function Main() {
   };
 
   return (
-    <div className="mainSec">
+    <>
+    <Header/> 
+     <div className="mainSec">
       {/* <Button >Open modal</Button> */}
       <img
         src={
@@ -69,7 +74,10 @@ function Main() {
       {/* <Modal/> */}
       <h1>salom</h1>
       <EmailJs />
+      <Footer/>
     </div>
+    </>
+   
   );
 }
 

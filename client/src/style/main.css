@@ -40,9 +40,9 @@
     font-size: 25px;
     padding-top: 5px;
   }
-  .content{
+  /* .content{
     min-height: calc(100vh - 8.5vh);
-  }
+  } */
   .footer{
     width: 100vw;
     height: 3vh;
