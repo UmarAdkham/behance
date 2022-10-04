@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Convert } from "mongo-image-converter";
 import axios from "axios"
 function Uploat() {
@@ -24,8 +24,12 @@ function Uploat() {
       //   console.warn(error.message);
     }
   };
+
+
+
   const handleChange = (e) => {
     setImageFile(e.target.files[0]);
+    
     
   };
   

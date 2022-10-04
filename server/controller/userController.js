@@ -5,8 +5,8 @@ const login = async (req, res) => {
   const { email, parol } = req.body;
 
   try {
-    const user = await User.findOne({ email, parol }).select(['-parol']);
-    res.status(200).json({user});
+    const user = await User.findOne({ email, parol }).select(["-parol"]);
+    res.status(200).json({ user });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -61,7 +61,6 @@ const edit = async (req, res) => {
  */
 const photoedit = async (req, res) => {
   const { profilRasmi } = req.body;
-  console.log("===================FIRST=================");
   try {
     User.findOneAndUpdate(
       { _id: req.params.id },

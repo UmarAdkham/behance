@@ -70,8 +70,7 @@ function Main() {
           </div>
         </Box>
       </Modal>
-      App
-      {/* <Modal/> */}
+     
       <h1>salom</h1>
       <EmailJs />
       <Footer/>
