@@ -12,7 +12,7 @@ function Footer() {
             </a>
           </li>
           <li>
-            {" "}
+        
             <select id="cars">
               <option value="fr">French</option>
               <option value="rus">Русский</option>
