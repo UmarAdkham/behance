@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 
 
 app.use("/api/user", userRouter);
-app.use("/api", photoRouter)
+app.use("/api/photos", photoRouter)
 
 //Database-ga Ulanish
 /*  */
