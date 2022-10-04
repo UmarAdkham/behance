@@ -6,6 +6,7 @@ import Login from "./routes/Login";
 import Register from "./routes/Register";
 import Main from "./routes/Main";
 import "./style/account-page.scss";
+import UserPhoto from "./routes/UserPhoto";
 function App() {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ function App() {
         <Route path="register" element={<Register />}></Route>
         <Route path="accountPage" element={<AccountPage />}></Route>
         <Route path="main" element={<Main />}></Route>
+        <Route path="addPhoto" element ={<UserPhoto/>}></Route>
         <Route path="edit" element ={<EditPage/>}></Route>
       </Routes>
     </BrowserRouter>
