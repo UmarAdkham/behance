@@ -1,6 +1,6 @@
 //
 const express = require("express")
-const {getPhotos, upload} = require("../controller/photosController")
+const {getPhotos, upload} = require("../controller/PhotosController")
 
 const photoRouter = express.Router()
 

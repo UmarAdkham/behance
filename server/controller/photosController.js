@@ -7,9 +7,7 @@ const getPhotos = async (req ,res)=>{
         res.status(200).json(photos)
     } catch (error) {
         res.status(404).json({error:"Error api"})
-        console.log('====================================');
         console.log(error);
-        console.log('====================================');
     }
 }
 
