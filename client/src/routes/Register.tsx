@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { registerInterface } from "../interface/registerInterface";
 import "../style/register.scss";
@@ -13,6 +13,7 @@ function Register() {
     familiya: "",
     ism: "",
     parol: "",
+    profilRasmi:'https://a5.behance.net/6ea9aa767d8e4bfd4c34068586c9b76450edbdc7/img/profile/no-image-138.png?cb=264615658',
   });
 
 
@@ -41,24 +42,12 @@ function Register() {
   }
 
   return (
-    <div className="otaDiv">
+    <div className="contenerRegister">
+      <div className="logo" >
+        <h1><span>Be</span> Behance</h1>
+      </div>
       <div className="bolaDiv1">
-        <p className="boshlagichQadam">Boshlangich qadam</p>
         <h1>Akkaunt ochish </h1>
-
-        <h1>Elektron pochtangiz orqali registrasiya qiling</h1>
-        {/* //path qoyish kerak */}
-        <p>
-          Akkauntgiz bor bolsa <Link to={"/"}>Kirish</Link>
-        </p>
-
-        {/* 
-<div className="inputlar"> 
-     
-    <div className="input2"></div>
-    
-</div> */}
-
         <form onSubmit={handelSubmit} >
           <label htmlFor="email">
             Email
@@ -71,10 +60,6 @@ function Register() {
               onChange={handelChange}
             />
           </label>
-
-
-
-
           <div>
             <label htmlFor="ism">
               Ism
@@ -97,12 +82,7 @@ function Register() {
                 onChange={handelChange}
               />
             </label>
-
-
-
           </div>
-
-
           <label htmlFor="parol">
             Parol
             <input
@@ -115,10 +95,11 @@ function Register() {
           </label>
           <button>Davom eting</button>
         </form>
+        <p>
+          Akkauntgiz bor bolsa <Link to={"/"}>Kirish</Link>
+        </p>
         <p>{xat}</p>
       </div>
-
-      <div className="bolaDiv"></div>
     </div>
   );
 }

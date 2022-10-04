@@ -1,11 +1,20 @@
 const mongoose = require("mongoose");
 
-const photoModelSchema = mongoose.Schema({
-  url: String,
-  title: String,
-  userId: mongoose.Schema.Types.ObjectId,
-  likes: 0,
-  views: 0,
-});
+const photoModelSchema = mongoose.Schema(
+  {
+    url: String,
+    title: String,
+    userId: String,
+    likes: {
+      type: Number,
+      default: 0
+    },
+    views: {
+      type: Number,
+      default: 0
+    }
+  },
+  { timestamps: true }
+);
 
-module.exports = mongoose.model("PhotoModel", photoModelSchema);
+module.exports = mongoose.model("Photo", photoModelSchema);

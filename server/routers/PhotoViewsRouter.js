@@ -1,10 +1,9 @@
-const express = require('express')
-const { views } = require('../controller/PhotoViewsController')
+const express = require("express");
+const { views,  } = require("../controller/PhotoViewsController");
 
-const viewsRouter = express.Router()
+const viewsRouter = express.Router();
+
+viewsRouter.put("/:id", views);
 
 
-
-viewsRouter.put('/:id', views)
-
-module.exports = viewsRouter
+module.exports = viewsRouter;
