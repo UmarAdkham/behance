@@ -1,9 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { TbMessageCircle } from "react-icons/tb";
 import "../style/main.scss";
 import EmailJs from "../components/EmailJs";
 const liker = require("../images/thumb-up-fill.png");
