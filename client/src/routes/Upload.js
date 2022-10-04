@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Convert } from "mongo-image-converter";
-import axios from "axios"
-function Uploat() {
+import axios from "axios";
+import "../style/PhotoAdd.scss";
+
+function Uploat(props) {
   const [imageFile, setImageFile] = useState("");
   // const [uploatImg setUploatImg] = useState("")
 
@@ -9,13 +11,13 @@ function Uploat() {
     try {
       const convertedImage = await Convert(imageFile);
       if (convertedImage) {
-        console.log(convertedImage);
+        // props.getPhoto(convertImage)
         const info = {
-          url:convertedImage,
-          title:"Test",
-          userId:"123"
-        }
-        axios.post("http://localhost:5000/api/photo/uploat" , info )
+          url: convertedImage,
+          title: "Test",
+          userId: "123",
+        };
+        axios.post("http://localhost:5000/api/photo/uploat", info);
         // after this pass it to the backend using your fav API,
       } else {
         console.log("The file is not in format of image/jpeg or image/png");
@@ -26,21 +28,23 @@ function Uploat() {
   };
   const handleChange = (e) => {
     setImageFile(e.target.files[0]);
-    
+    convertImage();
+    props.getPhoto(e.target.files[0]);
   };
-  
+
   return (
     <div className="uploat_img">
       <div className="img_container">
-        <div className="icon">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png"
-            alt="404"
-          />
-        </div>
-        <div>
-          <input type="file" onChange={handleChange} />
-          <button onClick={convertImage}> Submit </button>
+        <div className="icon"></div>
+        <div className="ppp">
+          <label>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Picture_icon_BLACK.svg/1200px-Picture_icon_BLACK.svg.png"
+              alt="404"
+            />
+            <input type="file" onChange={handleChange} />
+            <button onClick={convertImage}>send</button>
+          </label>
         </div>
       </div>
     </div>
