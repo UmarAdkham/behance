@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { TbMessageCircle } from "react-icons/tb";
+import emailjs from '@emailjs/browser';
 import "../style/emailjs.scss";
 
 function EmailJs() {
@@ -12,7 +13,21 @@ function EmailJs() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log("BEFORE IF")
+
+    if (form.current) {
+      console.log("INSIDE IF")
+
+      emailjs.sendForm('service_h1d6in7', 'template_fl6m5ke', form.current, '4NDi_hROu8sXQLfUk')
+        .then((result) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        });
+    }
   };
+
+
 
   return (
     <div className="modal">
@@ -25,9 +40,12 @@ function EmailJs() {
       <form
         style={{ display: displayModal ? "flex" : "none" }}
         onSubmit={handleSubmit}
+        ref={form}
       >
-        <input type="email" placeholder="emailingizni kiriting" />
-        <textarea>Test</textarea>
+        <input type="text" placeholder="Ismingizni kiriting" name="ism"  />
+        <input type="email" placeholder="emailingizni kiriting" name="Email" />
+        <textarea name="text"></textarea>
+        <button>send</button>
       </form>
     </div>
   );
