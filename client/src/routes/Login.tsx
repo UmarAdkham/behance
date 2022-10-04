@@ -27,7 +27,7 @@ function Login() {
     axios
       .post("http://localhost:5000/api/user/login", user)
       .then((res: any) => {
-        console.log(res.data)
+        console.log(res.data);
         if (res.data.user) {
           dispatch(setUserId(res.data.id));
           navigate("/accountPage");
@@ -37,11 +37,6 @@ function Login() {
       })
       .catch((err) => console.log(err));
   };
-
-  if (user.email === "admin@gmail.com" && user.parol === "1234") {
-    // navigate('/main')
-    console.log("working");
-  }
 
   return (
     <>
