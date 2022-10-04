@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AccountPage from "./routes/AccountPage";
+import EditPage from "./routes/EditPage";
 import Login from "./routes/Login";
 import Main from "./routes/Main";
 import Register from "./routes/Register";
@@ -14,6 +15,7 @@ function App() {
         <Route path="register" element={<Register />}></Route>
         <Route path="accountPage" element={<AccountPage />}></Route>
         <Route path="main" element={<Main />}></Route>
+        <Route path="edit" element ={<EditPage/>}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -63,7 +63,7 @@ const edit = async (req, res) => {
  */
 const photoedit = async (req, res) =>{
   const {profilRasmi} = req.body;
-  console.log('===================FIRST=================');
+  console.log(profilRasmi);
  try {
    User.findOneAndUpdate(
     {_id:req.params.id},

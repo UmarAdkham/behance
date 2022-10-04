@@ -21,6 +21,6 @@ userRouter.put("/:id", edit);
 /**
  * EDIT PHOTO OF USER
  */
-userRouter.put("./:id/photoedit", photoedit);
+userRouter.put("/:id/photoedit", photoedit);
 
 module.exports = userRouter;
