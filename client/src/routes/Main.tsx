@@ -2,6 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import "../style/main.scss";
+import axios from "axios";
 import EmailJs from "../components/EmailJs";
 const liker = require("../images/thumb-up-fill.png");
 
@@ -9,7 +10,13 @@ const close = require("../images/close-line.png");
 
 function Main() {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+  const handleOpen = (id :string) => {setOpen(true)
+ axios.post(`http://localhost:5000/api/photo/${id}}`).then((res)=>{
+  
+ })
+ 
+ 
+  };
   const handleClose = () => setOpen(false);
 
   const style = {
@@ -32,7 +39,7 @@ function Main() {
         }
         alt="BigCo Inc. logo"
         width={"600px"}
-        onClick={handleOpen}
+        onClick={()=>{handleOpen('6335239a86dca12cd1d5f93d')}}
       />
       <Modal
         open={open}
