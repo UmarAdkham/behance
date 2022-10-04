@@ -3,10 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AccountPage from "./routes/AccountPage";
 import EditPage from "./routes/EditPage";
 import Login from "./routes/Login";
-import Main from "./routes/Main";
 import Register from "./routes/Register";
+import Main from "./routes/Main";
 import "./style/account-page.scss";
-
 function App() {
   return (
     <BrowserRouter>
