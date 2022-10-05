@@ -1,14 +1,12 @@
-import React from "react";
+import { Link } from "react-router-dom";
+import { useAppSelector } from "../hook/hook";
 import "../style/account-page.scss";
 import "../style/account-page.scss";
-import Uploat from "./Upload";
+
 function AccountPage() {
-  const loadFile = function (event: React.ChangeEvent<HTMLInputElement>) {
-    // let image = document.getElementById("output");
-    // let useref=useRef<HTMLInputElement>(null)
-    // useref.current.src = URL.createObjectURL(event.target.files[0]);
-  };
-  let vaqt = new Date().toLocaleString();
+  let id = useAppSelector(state => state.userId)
+  console.log(id);
+
   return (
     <div className="account-page">
       <div className="add-photo-banner">
@@ -36,17 +34,16 @@ function AccountPage() {
       <div className="user-data">
         <div className="user-data-ichki-div">
           <div className="user-photo-profile">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"
-              alt="404-user-photo"
-            />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png" alt="404" />
           </div>
+
+
 
           <div className="h2pb">
             <h2>Sanjarbek Urolov</h2>
             <p>Uzbekistan</p>
             <button>
-              <h3>Редактировать профиль</h3>
+              <Link to={"/edit"}>Редактировать профиль</Link>
             </button>
 
             <div className="adobe-portfolio">
