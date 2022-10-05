@@ -35,44 +35,42 @@ function AccountPage() {
 
       <div className="user-data">
         <div className="user-data-ichki-div">
-            <div className="user-photo-profile">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"
-                alt="404-user-photo"
-              />
-            </div>
+          <div className="user-photo-profile">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"
+              alt="404-user-photo"
+            />
+          </div>
 
-            <div className="h2pb">
-              <h2>Sanjarbek Urolov</h2>
-              <p>Uzbekistan</p>
-              <button>
-                <h3>Редактировать профиль</h3>
-              </button>
+          <div className="h2pb">
+            <h2>Sanjarbek Urolov</h2>
+            <p>Uzbekistan</p>
+            <button>
+              <h3>Редактировать профиль</h3>
+            </button>
 
-              <div className="adobe-portfolio">
-                <h3>Опробовать Adobe Portfolio</h3>
-              </div>
-
+            <div className="adobe-portfolio">
+              <h3>Опробовать Adobe Portfolio</h3>
             </div>
           </div>
+        </div>
 
-          <div className="container-for-uploading-images">
-            <div className="nav-bar"></div>
-            <div className="images-container"></div>
-          </div>
-          
-          <div className="nanyat">
-            <h3>Nanyat</h3>
-            <hr style={{ width: "285px" }} />
-            <h4>Ищете возможности?</h4>
-            <p>
-              Добавьте новый раздел «Нанять», чтобы сообщить посетителям, что вы
-              ищете новые возможности для обеспечения занятости.
-            </p>
-          </div>
-          <Uploat/>
+        <div className="container-for-uploading-images">
+          <div className="nav-bar"></div>
+          <div className="images-container"></div>
+        </div>
+
+        <div className="nanyat">
+          <h3>Nanyat</h3>
+          <hr style={{ width: "285px" }} />
+          <h4>Ищете возможности?</h4>
+          <p>
+            Добавьте новый раздел «Нанять», чтобы сообщить посетителям, что вы
+            ищете новые возможности для обеспечения занятости.
+          </p>
         </div>
       </div>
+    </div>
   );
 }
 
