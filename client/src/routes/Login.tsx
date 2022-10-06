@@ -26,10 +26,9 @@ function Login() {
     e.preventDefault();
     axios
       .post("http://localhost:5000/api/user/login", user)
-      .then((res: any) => {
-        console.log(res.data);
+      .then((res: any) => { 
         if (res.data.user) {
-          dispatch(setUserId(res.data.id));
+          dispatch(setUserId(res.data.user._id));
           navigate("/accountPage");
         } else {
           setText("password yoki user name xato");

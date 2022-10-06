@@ -1,14 +1,12 @@
-import React from "react";
+import { Link } from "react-router-dom";
+import { useAppSelector } from "../hook/hook";
 import "../style/account-page.scss";
 import "../style/account-page.scss";
-import Uploat from "./Uploat";
+
 function AccountPage() {
-  const loadFile = function (event: React.ChangeEvent<HTMLInputElement>) {
-    // let image = document.getElementById("output");
-    // let useref=useRef<HTMLInputElement>(null)
-    // useref.current.src = URL.createObjectURL(event.target.files[0]);
-  };
-  let vaqt = new Date().toLocaleString();
+  let id = useAppSelector(state => state.userId)
+  console.log(id);
+
   return (
     <div className="account-page">
       <div className="add-photo-banner">
@@ -35,44 +33,41 @@ function AccountPage() {
 
       <div className="user-data">
         <div className="user-data-ichki-div">
-            <div className="user-photo-profile">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"
-                alt="404-user-photo"
-              />
-            </div>
-
-            <div className="h2pb">
-              <h2>Sanjarbek Urolov</h2>
-              <p>Uzbekistan</p>
-              <button>
-                <h3>Редактировать профиль</h3>
-              </button>
-
-              <div className="adobe-portfolio">
-                <h3>Опробовать Adobe Portfolio</h3>
-              </div>
-
-            </div>
+          <div className="user-photo-profile">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png" alt="404" />
           </div>
 
-          <div className="container-for-uploading-images">
-            <div className="nav-bar"></div>
-            <div className="images-container"></div>
-          </div>
-          
-          <div className="nanyat">
-            <h3>Nanyat</h3>
-            <hr style={{ width: "285px" }} />
-            <h4>Ищете возможности?</h4>
-            <p>
-              Добавьте новый раздел «Нанять», чтобы сообщить посетителям, что вы
-              ищете новые возможности для обеспечения занятости.
-            </p>
+
+
+          <div className="h2pb">
+            <h2>Sanjarbek Urolov</h2>
+            <p>Uzbekistan</p>
+            <button>
+              <Link to={"/edit"}>Редактировать профиль</Link>
+            </button>
+
+            <div className="adobe-portfolio">
+              <h3>Опробовать Adobe Portfolio</h3>
+            </div>
           </div>
         </div>
-        <Uploat />
+
+        <div className="container-for-uploading-images">
+          <div className="nav-bar"></div>
+          <div className="images-container"></div>
+        </div>
+
+        <div className="nanyat">
+          <h3>Nanyat</h3>
+          <hr style={{ width: "285px" }} />
+          <h4>Ищете возможности?</h4>
+          <p>
+            Добавьте новый раздел «Нанять», чтобы сообщить посетителям, что вы
+            ищете новые возможности для обеспечения занятости.
+          </p>
+        </div>
       </div>
+    </div>
   );
 }
 
