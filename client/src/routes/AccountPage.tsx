@@ -1,13 +1,12 @@
 import React from "react";
 import "../style/account-page.scss";
 import Uploat from "./Uploat";
+
+
 function AccountPage() {
-  const loadFile = function (event: React.ChangeEvent<HTMLInputElement>) {
-    // let image = document.getElementById("output");
-    // let useref=useRef<HTMLInputElement>(null)
-    // useref.current.src = URL.createObjectURL(event.target.files[0]);
-  };
+  
   let vaqt=new Date().toLocaleString();
+
   return (
     <div className="account-page">
       <div className="add-photo-banner">
@@ -24,7 +23,6 @@ function AccountPage() {
             accept="image/*"
             name="image"
             id="file"
-            // onChange={loadFile(e:React.ChangeEvent<HTMLInputElement>)}
             style={{ display: "none" }}
           />
           <h2>Добавить изображение баннера.</h2>
@@ -97,15 +95,5 @@ function AccountPage() {
 
 export default AccountPage;
 
-{
-  /* <label htmlFor="aaa">
-          <img
-            style={{ borderRadius: "50%" }}
-            src="https://thumbs.dreamstime.com/z/%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%BA%D0%B0-%D0%B2%D0%BD%D0%B8%D0%B7-%D1%81-%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8-%D0%BD%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%BA%D0%B8-%D0%B7%D0%BD%D0%B0%D1%87%D0%BA%D0%BE%D0%B2-189931526.jpg"
-            alt="404-img-strelka"
-            width={50}
-            height={50}
-          /> 
-          </label>
-          <input type="file" id="aaa" style={{display:"none"}}/> */
-}
+
+ 
