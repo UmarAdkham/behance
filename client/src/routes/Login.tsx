@@ -28,7 +28,8 @@ function Login() {
       .post("http://localhost:5000/api/user/login", user)
       .then((res: any) => { 
         if (res.data.user) {
-          dispatch(setUserId(res.data.user._id));
+          console.log(res.data.user)
+          dispatch(setUserId(res.data.user));
           navigate("/accountPage");
         } else {
           setText("password yoki user name xato");

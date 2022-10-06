@@ -1,26 +1,32 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { userIdInterface } from "../interface/userIdInterface";
+import { userInterface } from "../interface/userIdInterface";
 import { RootState } from "./store";
 
-const initialState: userIdInterface = { id: '' }
+const initialState: userInterface = {
+  _id: "",
+  profilRasmi: "",
+  ism: "",
+  familiya: "",
+  email: "",
+};
 
 // login bolgan user id {type : string}  saqlovchi slise
 const userIdSlise = createSlice({
-    name: 'userId',
-    initialState,
-    reducers: {
-        setUserId: (state, action: PayloadAction<string>) => {
-            // login bolgan user id redux ga qoyib qoysh
-            state.id = action.payload
-        }
-    }
-})
+  name: "user",
+  initialState,
+  reducers: {
+    setUserId: (state, action: PayloadAction<userInterface>) => {
+      console.log(action.payload);
+      // login bolgan user id redux ga qoyib qoysh
+      state._id = action.payload._id;
+      state.profilRasmi = action.payload.profilRasmi;
+      state.ism = action.payload.ism;
+      state.familiya = action.payload.familiya;
+      state.email = action.payload.email;
+    },
+  },
+});
 
-export const { setUserId } = userIdSlise.actions
-export const userId = (state: RootState) => state.userId;
-export default userIdSlise.reducer
-
-
-
-
-
+export const { setUserId } = userIdSlise.actions;
+export const user = (state: RootState) => state;
+export default userIdSlise.reducer;
