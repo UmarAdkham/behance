@@ -12,6 +12,9 @@ function Main() {
   const sharePhoto = () => {
     navigate("/accountPage");
   };
+  const userPhotoPage = () =>{
+    navigate("/addPhoto")
+  }
 
   return (
     <div>
@@ -56,7 +59,7 @@ function Main() {
             />
           </li>
           <li>
-            <button className="linkShare">Rasm Ulashish</button>
+            <button className="linkShare" onClick={userPhotoPage}>Rasm Ulashish</button>
           </li>
 
           <li>
