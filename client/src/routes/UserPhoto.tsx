@@ -124,7 +124,7 @@ function UserPhoto() {
         <Dialog open={open} onClose={handlePost}>
           <DialogTitle>Subscribe</DialogTitle>
           <DialogContent>
-            <DialogContentText>Iltmos Rsamiga title yozing</DialogContentText>
+            <DialogContentText>Iltimos Rasmga title yozing</DialogContentText>
 
             {/* <input type="text" onChange={(e) => setText(e.target.value)} /> */}
             <TextField
@@ -138,8 +138,8 @@ function UserPhoto() {
             />
           </DialogContent>
           <DialogActions>
-            <Button onClick={handleClose}>Cancel</Button>
-            <Button onClick={handlePost}>Subscribe</Button>
+            <Button onClick={handleClose}>Orqaga</Button>
+            <Button onClick={handlePost}>Yuborish</Button>
           </DialogActions>
         </Dialog>
       </div>

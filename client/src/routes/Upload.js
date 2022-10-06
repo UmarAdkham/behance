@@ -65,7 +65,7 @@ function Uploat(props) {
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             Diqqat! <br />
-            rsim faqat png va jpn farmatda bo'lishi lozim <br />
+            rasm faqat png va jpg formatda bo'lishi lozim <br />
            Siz aniq rasmni tanlaganingizga aminmsiz ?
           </DialogContentText>
         </DialogContent>
