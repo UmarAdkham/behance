@@ -13,7 +13,7 @@ function Main() {
     navigate("/accountPage");
   };
   const userPhotoPage = () =>{
-    navigate("/addPhoto")
+    navigate("/user/addPhoto")
   }
 
   return (
