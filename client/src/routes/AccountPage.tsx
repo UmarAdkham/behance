@@ -1,5 +1,6 @@
 import { useSelect } from "@mui/base";
 import { Link } from "react-router-dom";
+import UserImgs from "../components/UserImgs";
 import { useAppSelector } from "../hook/hook";
 import "../style/account-page.scss";
 import "../style/account-page.scss";
@@ -67,6 +68,7 @@ function AccountPage() {
           </p>
         </div>
       </div>
+      <UserImgs />
     </div>
   );
 }
