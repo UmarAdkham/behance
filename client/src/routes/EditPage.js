@@ -6,10 +6,10 @@ import axios from "axios";
 import { useAppSelector } from "../hook/hook";
 function Test() {
   const [imageFile, setImageFile] = useState("");
-  const id = useAppSelector((state)=>{
-    return state.userId.id
+  const user = useAppSelector((state)=>{
+    return state.user
   })
-  console.log(id)
+ 
   const [con, setCon] = useState(
     "https://a5.behance.net/7e18fe61d755ce06370bb4e00997e2bf4ac1c7e5/img/profile/no-image-138.png?cb=264615658"
   );
@@ -22,7 +22,7 @@ function Test() {
           profilRasmi: convertedImage,
         };
 
-        axios.put(`http://localhost:5000/api/user/${id}/photoedit`, info);
+        axios.put(`http://localhost:5000/api/user/${user._id}/photoedit`, info);
         setCon(convertedImage);
       } else {
         console.log("The file is not in format of image/jpeg or image/png");
