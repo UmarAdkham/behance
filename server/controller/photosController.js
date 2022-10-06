@@ -42,5 +42,5 @@ const views = async (request, respose) => {
 
 
 module.exports = {
-  getPhotos, upload, views,
+  getPhotos, upload, views,likes
 }
