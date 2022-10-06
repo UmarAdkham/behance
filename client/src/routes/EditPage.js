@@ -3,8 +3,13 @@ import { Convert } from "mongo-image-converter";
 import { FaCloudUploadAlt } from "react-icons/fa";
 import "../style/editPage.scss";
 import axios from "axios";
+import { useAppSelector } from "../hook/hook";
 function Test() {
   const [imageFile, setImageFile] = useState("");
+  const id = useAppSelector((state)=>{
+    return state.userId.id
+  })
+  console.log(id)
   const [con, setCon] = useState(
     "https://a5.behance.net/7e18fe61d755ce06370bb4e00997e2bf4ac1c7e5/img/profile/no-image-138.png?cb=264615658"
   );
@@ -12,7 +17,6 @@ function Test() {
     try {
       const convertedImage = await Convert(imageFile);
       if (convertedImage) {
-        let id = "63355b9244485cfbce1faf26";
         // console.log(convertedImage);
         const info = {
           profilRasmi: convertedImage,

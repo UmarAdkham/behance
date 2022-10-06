@@ -1,11 +1,12 @@
+import { useSelect } from "@mui/base";
 import { Link } from "react-router-dom";
 import { useAppSelector } from "../hook/hook";
 import "../style/account-page.scss";
 import "../style/account-page.scss";
 
 function AccountPage() {
-  let id = useAppSelector(state => state.userId)
-  console.log(id);
+
+  let userPhoto = useAppSelector(state => state.user.profilRasmi)
 
   return (
     <div className="account-page">
@@ -34,7 +35,7 @@ function AccountPage() {
       <div className="user-data">
         <div className="user-data-ichki-div">
           <div className="user-photo-profile">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png" alt="404" />
+            <img src={userPhoto} alt="404" />
           </div>
 
 
