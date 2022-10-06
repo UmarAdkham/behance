@@ -30,7 +30,7 @@ function Login() {
         if (res.data.user) {
           console.log(res.data.user)
           dispatch(setUserId(res.data.user));
-          navigate("/layout");
+          navigate("/user");
         } else {
           setText("password yoki user name xato");
         }
