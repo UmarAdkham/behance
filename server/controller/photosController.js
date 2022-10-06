@@ -38,8 +38,20 @@ const views = async (request, respose) => {
 };
 
 
-
-
+const likes = async (request, respose) => {
+  Photos.findByIdAndUpdate(
+    { _id: request.params.id },
+    { $inc: { likes: 1 } },
+    { new: true },
+    (error, response) => {
+      if (error) {
+        console.log(error);
+        return respose.send({ error: error.message });
+      }
+      respose.send({ likes: response.likes });
+    }
+  );
+};
 
 module.exports = {
   getPhotos, upload, views,likes
