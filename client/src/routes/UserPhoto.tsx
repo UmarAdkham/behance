@@ -13,42 +13,36 @@ import DialogTitle from "@mui/material/DialogTitle";
 import axios from "axios";
 import { useAppSelector } from "../hook/hook";
 function UserPhoto() {
-// m ui setate
+  // m ui setate
   const [progress, setProgress] = React.useState(0);
   const [open, setOpen] = React.useState(false);
-// o'zmizni state lar 
+  // o'zmizni state lar 
   const [photo, setPhoto] = useState("");
   const [haveImgs, setHandleImg] = useState<boolean>(false);
   const [text, setText] = useState<string>("");
-  let UserId = useAppSelector((state)=>{ return state.user._id})
+  let UserId = useAppSelector((state) => { return state.user._id })
   console.log(UserId);
-  
+
   //m ui
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((oldProgress) => {
-        if (oldProgress === 100) {
-          return 0;
-        }
-        const diff = Math.random() * 2.3;
-        return Math.min(oldProgress + diff, 100);
-      });
-    }, 100);
+      setProgress((oldProgress) => (oldProgress >= 100 ? 0 : progress));
+    }, 800);
 
     return () => {
       clearInterval(timer);
     };
   }, []);
-// title ochish uchun
+  // title ochish uchun
   const handleClickOpen = () => {
     setOpen(true);
   };
-// title yopish uchun
+  // title yopish uchun
   const handleClose = () => {
     setOpen(false);
   };
   //m ui end
-// upload page dan foto linkni olish 
+  // upload page dan foto linkni olish 
   const getPhoto = (photo: any) => {
     setPhoto(photo);
     setTimeout(() => {
