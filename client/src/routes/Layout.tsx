@@ -4,10 +4,13 @@ import { useAppSelector } from '../hook/hook'
 
 function Layout() {
 
-    let Login = useAppSelector((state) => { return state.user._id })
+    let Login = useAppSelector((state) => { return state.user._id });
+    console.log(Login);
+    
 
     return (
-        Login != "" ? < Outlet /> : <Navigate to="/" />
+        Login != "" ? < Outlet /> : <Navigate to="/" replace/>
+        // <Outlet />
     )
 }
 
