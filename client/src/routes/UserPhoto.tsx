@@ -54,7 +54,7 @@ function UserPhoto() {
     const info = {
       url: `${photo}`,
       title: text,
-      userId: "63355b9244485cfbce1faf26",
+      userId: UserId,
     };
     axios.post("http://localhost:5000/api/photos/upload", info).then((res) => {
       if (res.status === 200) {
