@@ -1,4 +1,5 @@
 const Photos = require("../models/PhotoModel")
+const mongoose = require("mongoose")
 
 const getPhotos = async (req, res) => {
   try {
@@ -47,9 +48,22 @@ const getUserPhotos = async (request, response) => {
     error ? response.send({ error: error.message }) : response.send(res)
   })
 }
+const deletePhoto = async (req, res) => {
+  const id = req.params.id;
+  console.log(req.params);
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.json({ error: "ID noto`g`ri" });
+  }
+
+  Photos.findOneAndDelete({ _id: id }, (err, deletedPhoto) => {
+    if (!err) res.json(deletedPhoto);
+    else res.json({ error: err.message });
+  });
+};
 
 
 
 module.exports = {
-  getPhotos, upload, views, getUserPhotos,
+  getPhotos, upload, views, getUserPhotos,deletePhoto
 }
