@@ -11,16 +11,7 @@ function Footer() {
               More Behance
             </a>
           </li>
-          <li>
-        
-            <select id="cars">
-              <option value="fr">French</option>
-              <option value="rus">Русский</option>
-              <option value="eng" selected>
-                English
-              </option>
-            </select>
-          </li>
+       
           <li>
             {" "}
             <a className="s4" href="#">
