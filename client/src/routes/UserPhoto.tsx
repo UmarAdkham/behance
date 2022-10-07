@@ -11,6 +11,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import axios from "axios";
+import { useAppSelector } from "../hook/hook";
 function UserPhoto() {
 // m ui setate
   const [progress, setProgress] = React.useState(0);
@@ -19,6 +20,9 @@ function UserPhoto() {
   const [photo, setPhoto] = useState("");
   const [haveImgs, setHandleImg] = useState<boolean>(false);
   const [text, setText] = useState<string>("");
+  let UserId = useAppSelector((state)=>{ return state.user._id})
+  console.log(UserId);
+  
   //m ui
   React.useEffect(() => {
     const timer = setInterval(() => {

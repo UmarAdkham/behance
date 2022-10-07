@@ -6,6 +6,8 @@ function UserImgs() {
     let userId = useAppSelector((state) => { return state.user._id })
     let [imgs, setImgs] = useState<any[]>
         ()
+        console.log(userId);
+        
     useEffect(() => {
         axios.post('http://localhost:5000/api/photos/userPhotos', userId).then((res) => {
             console.log(res);
