@@ -9,7 +9,7 @@
     height: 7vh;
     background-color:  #FFF;
     margin: 0;
-  
+  border-bottom: 1px solid #333;
   }
   .navBar a{
     text-decoration: none;
