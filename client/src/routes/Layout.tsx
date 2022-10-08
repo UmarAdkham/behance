@@ -9,7 +9,7 @@ function Layout() {
     
 
     return (
-        Login != "" ? < Outlet /> : <Navigate to="/" replace/>
+        Login !== "" ? < Outlet /> : <Navigate to="/" replace/>
         // <Outlet />
     )
 }
