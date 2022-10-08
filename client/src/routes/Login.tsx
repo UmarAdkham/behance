@@ -82,7 +82,7 @@ function Login() {
               />
 
               <p className="link">
-                Ro'yxatdan  o'tmaganmisiz ?{" "}
+                Ro'yxatdan  o'tganmisiz ?{" "}
                 <Link to={"/register"}>Ro'yxatdan o'tish</Link>
               </p>
               <p style={{ textAlign: "center" }}>{text}</p>

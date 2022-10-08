@@ -31,7 +31,7 @@
       margin: auto;
       text-align: center;
       color: #fff;
-      // line-height: 30px;
+      line-height: 30px;
     }
   }
 
@@ -40,26 +40,31 @@
     cursor: pointer;
   }
 
+
   .user-data {
-    width: 95%;
-    margin: auto;
-    height: 500px;
+    width: 360px;
+    height: 697px;
     position: relative;
-    top: -90px;
+    top: -120px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     border-radius: 5px;
-    // border: 1px solid red;
+    // border: 1px solid yellow;
+    background-color: white;
     text-align: center;
-    line-height: 50px;
-    padding: 0 50px;
+    // line-height: 50px;
+    margin-left: 50px;
 
     .user-data-ichki-div {
-      width: 350px;
-      background-color: white;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      padding: 50px 0;
+      width: 300px;
+      // padding: 50px 0;
+      // border: 1px solid red;
 
+      .h2parabtn {
+        margin-top: 5px;
+        // border: 1px solid crimson;
+        line-height: 55px;
+      }
 
       button {
         width: 298px;
@@ -73,11 +78,11 @@
       }
 
       .user-photo-profile {
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
         border-radius: 50%;
         margin: auto;
-        // margin-top: 30px;
+        margin-top: 30px;
       }
 
       .user-photo-profile img {
@@ -103,16 +108,73 @@
 
       .nanyat {
         position: relative;
+        top: 30px;
         width: 300px;
-        height: 300px;
+        height: 245px;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        top: 90px;
-        background-color: white;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        // align-items: center;
+        background: white;
+        border: 1px solid rgb(238, 235, 235);
+        text-align: left;
+
+        h3 {
+          padding: 8px 15px;
+
+        }
+
+        h4 {
+          padding: 15px 15px;
+        }
+
+        p {
+          padding-left: 10px;
+          text-align: left;
+          line-height: 25px;
+        }
+
+        button {
+          width: 90%;
+          color: #0057ff;
+          background-color: #f5f8ff;
+          font-size: 16px;
+          transition: .3s linear;
+          font-weight: bold;
+        }
+
+
+        button:hover {
+          background-color: #dbdfe7;
+        }
       }
     }
+  }
+
+  /*---------------------------------------------------------------------*/
+  .container-for-uploading-images {
+    width: 72%;
+    height: 100vh;
+    border: 2px solid red;
+    float: right;
+    position: relative;
+    top: -680px;
+
+
+
+    .nav-bar {
+      width: 100%;
+      height: 60px;
+      border: 2px solid green;
+      width: 100%;
+    }
+
+    .images-container {
+      width: 95%;
+      height: 90vh;
+      border: 2px solid blue;
+     margin: auto;
+    }
+
   }
 
   /* ----------------------------Jamshid yozgan kod  boshlandi----------------------------------*/
@@ -153,7 +215,7 @@
 
   /* ----------------------------Jamshid yozgan kod tugadi-----------------------------------------------*/
 
-  /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+  /*-------------------------------  Responsivlik -------------------------------------------*/
 
 
 
@@ -182,6 +244,7 @@
       position: relative;
       left: 0;
       top: 0;
+      margin: auto;
 
       .user-data-ichki-div {
         width: 100%;
@@ -197,14 +260,14 @@
           border: 10px solid white;
         }
 
-        .h2pb {
+        .h2parabtn {
           position: relative;
           top: -72px;
         }
 
         button {
           width: 95%;
-          margin: 10px;
+          margin-bottom: 35px;
         }
 
         .adobe-portfolio {
@@ -212,7 +275,8 @@
         }
 
         hr {
-          width: 100%;
+          width: 98%;
+          margin: auto;
         }
 
         .nanyat {
@@ -224,19 +288,46 @@
 
           button {
             width: 95%;
+            margin: 15px auto;
           }
 
         }
       }
     }
 
+    .container-for-uploading-images {
+      position: relative;
+      top: 0;
+      width: 100%;
+    }
+
+
+
+
     @media (max-width: 686px) {
       .add-photo-banner {
         height: 146px;
       }
     }
+
+
+  }
+
+  @media (max-width: 1300px ) and (min-width: 1200px) {
+    .container-for-uploading-images {
+      width: 65%;
+      position: relative;
+      right: 0;
+      background-color: darkcyan;
+      
+      // .images-container{
+      //   width: 100%;
+      // }
+    }
   }
 }
+
+
 
 
 .noPage {
