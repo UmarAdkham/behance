@@ -41,7 +41,7 @@ const views = async (request, respose) => {
 
 // post userga tegishlik rasimlarni olish 
 const getUserPhotos = async (request, response) => {
-  Photos.find({ userId: request.body.userId }, (error, res) => {
+  Photos.find({ userId: request.body._id }, (error, res) => {
     error ? response.send({ error: error.message }) : response.send(res)
   })
 }
