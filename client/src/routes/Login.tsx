@@ -32,7 +32,7 @@ function Login() {
           dispatch(setUserId(res.data.user));
           navigate("/user");
         } else {
-          setText("password yoki user name xato");
+          setText("Password yoki user name xato");
         }
       })
       .catch((err) => console.log(err));
@@ -82,8 +82,8 @@ function Login() {
               />
 
               <p className="link">
-                Ro'yxatdan hali ham o'tmaganmisiz ?{" "}
-                <Link to={"/register"}>Ro'yxatdan o'ting</Link>
+                Ro'yxatdan  o'tmaganmisiz ?{" "}
+                <Link to={"/register"}>Ro'yxatdan o'tish</Link>
               </p>
               <p style={{ textAlign: "center" }}>{text}</p>
               <button>Login</button>

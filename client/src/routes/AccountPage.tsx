@@ -53,10 +53,13 @@ function AccountPage() {
           </div>
         </div>
 
+
+
         <div className="container-for-uploading-images">
           <div className="nav-bar"></div>
           <div className="images-container"></div>
         </div>
+
 
         <div className="nanyat">
           <h3>Nanyat</h3>
