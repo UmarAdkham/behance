@@ -2,6 +2,7 @@ import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useAppSelector } from "../hook/hook";
 import "../style/main.css";
+import Logout from "./Logout";
 function Main() {
   const navigate = useNavigate();
 
@@ -12,9 +13,9 @@ function Main() {
   const sharePhoto = () => {
     navigate("/user/accountPage");
   };
-  const userPhotoPage = () =>{
-    navigate("/user/addPhoto")
-  }
+  const userPhotoPage = () => {
+    navigate("/user/addPhoto");
+  };
 
   return (
     <div>
@@ -59,11 +60,17 @@ function Main() {
             />
           </li>
           <li>
-            <button className="linkShare" onClick={userPhotoPage}>Rasm Ulashish</button>
+            <button className="linkShare" onClick={userPhotoPage}>
+              Rasm Ulashish
+            </button>
           </li>
 
           <li>
             <button className="signbt">Sign up</button>
+          </li>
+
+          <li>
+            <Logout />
           </li>
         </ul>
       </div>
