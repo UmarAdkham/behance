@@ -1,5 +1,5 @@
 const express = require("express");
-const { login, register, edit, photoedit } = require("../controller/userController");
+const { login, google_login, register, edit, photoedit } = require("../controller/userController");
 
 const userRouter = express.Router();
 
@@ -11,6 +11,10 @@ userRouter.post("/register", register);
  */
 userRouter.post("/login", login);
 
+/**
+ * EDIT |Google login
+ */
+ userRouter.post("/google-login", google_login);
 /**
  * EDIT USERNAME AND PASSWORD
  */
