@@ -34,6 +34,7 @@
   }
 
   .divForm {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,92 +89,3 @@
     }
   }
 }
-
-// .modal {
-//     position: fixed;
-//     right: -5vw;
-//     bottom: 5%;
-//     width: 250px;
-//     display: flex;
-//     flex-direction: column-reverse;
-//     align-items: center;
-//     gap: 10px;
-//     z-index: 1;
-
-//     // background-color: red;
-//     .circle {
-//         width: 50px;
-//         height: 50px;
-//         border: 2px solid rgb(1, 10, 14);
-//         border-radius: 50%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         padding-top: 5px;
-//         transition: all .5s linear;
-//         z-index: 1;
-//         cursor: pointer;
-
-//         span {
-//             font-size: 30px;
-//             color: rgb(1, 15, 20);
-//             transition: 0.5s;
-//         }
-//     }
-
-//     .circle:hover {
-//         span {
-//             transform: scale(1.1);
-//         }
-//     }
-
-// }
-
-// .divForm {
-//     padding: 10px;
-//     border-radius: 10px;
-//     border: 1px solid rgb(49, 48, 48);
-//     form {
-//         width: 90%;
-//         height: 300px;
-//         display: none;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: center;
-//         // border: 2px solid rgb(19, 4, 16);
-//         margin-right: 10vw;
-//         gap: 10px;
-
-//         button {
-//             width: 100px;
-//             height: 30px;
-//             margin-right: 30px;
-//             font-size: 20px;
-//             border: 2px solid rgb(0, 191, 255);
-//             padding-top: 5px;
-//             text-align: center;
-//             cursor: pointer;
-//         }
-
-//         input,
-//         textarea {
-//             margin-right: 10vw;
-//             width: 100%;
-//             height: 50px;
-//             font-size: 15px;
-//             border: 2px solid rgb(0, 191, 255);
-//         }
-
-//         textarea {
-//             height: 300px;
-//             resize: none;
-//         }
-
-//         input:focus,
-//         textarea:focus {
-
-//             outline: none;
-//             border: 2px solid rgb(0, 191, 255);
-//         }
-//     }
-// }
