@@ -6,6 +6,7 @@ export interface registerInterface {
     familiya: string,
     parol: string,
     profilRasmi:string,
+    createdAt:string,
 }
 
 export interface loginInterface {

@@ -118,5 +118,4 @@ const photoedit = async (req, res) => {
     console.log(error);
   }
 };
-
 module.exports = { login, google_login,facebook_login, register, edit, photoedit };

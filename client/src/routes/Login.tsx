@@ -97,9 +97,8 @@ function Login() {
       .post("http://localhost:5000/api/user/facebook-login", pathphoto)
       .then((res: any) => {
         if (res.data.user) {
-          console.log(res.data.user);
           dispatch(setUserId(res.data.user));
-          navigate("/user");
+          navigate("/user" );
         } else {
           setText("Password yoki user name xato");
         }
@@ -111,7 +110,7 @@ function Login() {
   return (
     <>
       <div className="login-wrapper">
-        <div className="login-box">
+        <div className="login-box"> 
           <div>
             <h1>
               <span>Be</span> Behance

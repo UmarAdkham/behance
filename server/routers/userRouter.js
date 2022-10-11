@@ -3,11 +3,11 @@ const { login, google_login, register, edit, photoedit, facebook_login } = requi
 
 const userRouter = express.Router();
 
-//BU REGISTER KANTROLLERI
+//BU REGISTER KONTROLLERI
 userRouter.post("/register", register);
 
 /**
- * LOGIN KANTROLLER
+ * LOGIN KONTROLLER
  */
 userRouter.post("/login", login);
 
@@ -29,5 +29,6 @@ userRouter.put("/:id", edit);
  * EDIT PHOTO OF USER
  */
 userRouter.put("/:id/photoedit", photoedit);
+
 
 module.exports = userRouter;

@@ -8,6 +8,7 @@ const initialState: userInterface = {
   ism: "",
   familiya: "",
   email: "",
+  createdAt:"",
 };
 
 // login bolgan user id {type : string}  saqlovchi slise
@@ -23,6 +24,7 @@ const userIdSlise = createSlice({
       state.ism = action.payload.ism;
       state.familiya = action.payload.familiya;
       state.email = action.payload.email;
+      state.createdAt=action.payload.createdAt;
     },
   },
 });
