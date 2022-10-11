@@ -8,34 +8,36 @@ function Register() {
   let [xat, setXat] = useState('')
 
   let naviget = useNavigate()
-  let [regitesr, setRegister] = useState<registerInterface>({
+  let [register, setRegister] = useState<registerInterface>({
     email: "",
     familiya: "",
     ism: "",
     parol: "",
     profilRasmi:'https://a5.behance.net/6ea9aa767d8e4bfd4c34068586c9b76450edbdc7/img/profile/no-image-138.png?cb=264615658',
+     createdAt:'',
   });
 
 
   // inputlardan xosil bolayotgan object
 
   const handelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setRegister({ ...regitesr, [e.target.name]: e.target.value });
+    setRegister({ ...register, [e.target.name]: e.target.value });
   };
 
 
   const handelSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     axios
-      .post('http://localhost:5000/api/user/register', regitesr)
+      .post('http://localhost:5000/api/user/register', register)
       .then((res: any) => {
+        console.log(res.data)
         if (res.data.error) {
           //  apidan kelgan xatolikn ekranga chiqarish
           setXat(res.data.error)
         }
         else {
-          naviget('/')
-          // apidan kelgan xatolikn ekranga chiqarishni boshatish
+          naviget('/' , {state:xat})
+          // apidan kelgan xatolikni ekranga chiqarishni boshatish
           setXat('')
         }
       })
@@ -47,7 +49,7 @@ function Register() {
         <h1><span>Be</span> Behance</h1>
       </div>
       <div className="bolaDiv1">
-        <h1>Akkaunt ochish </h1>
+        <h1>Akkount ochish </h1>
         <form onSubmit={handelSubmit} >
           <label htmlFor="email">
             Email
@@ -55,7 +57,7 @@ function Register() {
             <input
               type="email"
               name="email"
-              value={regitesr.email || ""}
+              value={register.email || ""}
               id="email"
               onChange={handelChange}
             />
@@ -66,7 +68,7 @@ function Register() {
               <input
                 type="text"
                 name="ism"
-                value={regitesr.ism || ""}
+                value={register.ism || ""}
                 id="ism"
                 onChange={handelChange}
               />
@@ -77,7 +79,7 @@ function Register() {
               <input
                 type="text"
                 name="familiya"
-                value={regitesr.familiya || ""}
+                value={register.familiya || ""}
                 id="familiya"
                 onChange={handelChange}
               />
@@ -88,7 +90,7 @@ function Register() {
             <input
               type="text"
               name="parol"
-              value={regitesr.parol || ""}
+              value={register.parol || ""}
               id="parol"
               onChange={handelChange}
             />

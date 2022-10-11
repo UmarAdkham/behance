@@ -11,6 +11,7 @@ const liker = require("../images/thumb-up-fill.png");
 
 const close = require("../images/close-line.png");
 
+
 function Main() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = (id: string) => {
@@ -19,6 +20,8 @@ function Main() {
   };
   const handleClose = () => setOpen(false);
 
+  const [all, setAll] =React.useState([])
+  
   const style = {
     position: "absolute",
     top: "50%",
@@ -30,6 +33,19 @@ function Main() {
     // bgcolor: "red",
   };
 
+  const [photos, setPhotos] = React.useState([]);
+  React.useEffect(() => {
+    axios
+       .get('http://localhost:5000/api/photos/photos')
+      .then((res) => {
+        setPhotos(res.data);
+        console.log(res.data);
+        console.log(photos);
+      });
+  }, []);
+
+
+    
   return (
     <>
       <Header />
@@ -70,6 +86,10 @@ function Main() {
           </Box>
         </Modal>
 
+
+
+
+        
         <h1>salom</h1>
         <EmailJs />
         <Footer />

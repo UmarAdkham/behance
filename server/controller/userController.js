@@ -76,4 +76,5 @@ const photoedit = async (req, res) => {
   }
 };
 
-module.exports = { login, register, edit, photoedit };
+
+module.exports = { login, register, edit, photoedit  };

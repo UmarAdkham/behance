@@ -24,7 +24,7 @@ const upload = async (req, res) => {
 
 // put rasimni korilganlar sonini oshirish
 
-const views = async (request, respose) => {
+const views = async (request, response) => {
   Photos.findByIdAndUpdate(
     { _id: request.params.id },
     { $inc: { views: 1 } },
@@ -32,9 +32,9 @@ const views = async (request, respose) => {
     (error, response) => {
       if (error) {
         console.log(error);
-        return respose.send({ error: error.message });
+        return response.send({ error: error.message });
       }
-      respose.send({ views: response.views });
+      response.send({ views: response.views });
     }
   );
 };

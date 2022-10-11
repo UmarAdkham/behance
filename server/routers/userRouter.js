@@ -1,13 +1,13 @@
 const express = require("express");
-const { login, register, edit, photoedit } = require("../controller/userController");
+const { login, register, edit, photoedit, getUsers } = require("../controller/userController");
 
 const userRouter = express.Router();
 
-//BU REGISTER KANTROLLERI
+//BU REGISTER KONTROLLERI
 userRouter.post("/register", register);
 
 /**
- * LOGIN KANTROLLER
+ * LOGIN KONTROLLER
  */
 userRouter.post("/login", login);
 
@@ -22,5 +22,6 @@ userRouter.put("/:id", edit);
  * EDIT PHOTO OF USER
  */
 userRouter.put("/:id/photoedit", photoedit);
+
 
 module.exports = userRouter;

@@ -5,6 +5,7 @@ export interface userInterface {
     profilRasmi: string,
     ism: string,
     familiya: string,
-    email: string
+    email: string,
+    createdAt:string,
 }
 
