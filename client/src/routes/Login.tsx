@@ -81,7 +81,7 @@ function Login() {
   };
   //Facebook button ishlahi
   const componentClicked = (res: any) => {
-    console.log('qqq')
+    console.log("qqq");
     // console.log(res, 'Login');
   };
   const responseFacebook = (res: any) => {
@@ -141,7 +141,6 @@ function Login() {
                   onClick={componentClicked}
                   callback={responseFacebook}
                 />
-      
               </p>
               <p className="btn-socialMedia btn-apple">
                 {" "}
