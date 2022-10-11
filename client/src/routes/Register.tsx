@@ -1,8 +1,10 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { registerInterface } from "../interface/registerInterface";
 import "../style/register.scss";
+import { gapi } from "gapi-script";
+let clientId = "376958828328-obualjstu96hflb5i45i90poqhip8a3p.apps.googleusercontent.com"
 function Register() {
 
   let [xat, setXat] = useState('')
@@ -17,7 +19,19 @@ function Register() {
      createdAt:'',
   });
 
+// google api ga oid  Iltmos teginmang !!!!!
+useEffect(()=>{
+  function start(){
+    gapi.client.init({
+      clientId:clientId,
+      scope:""
+    })
+  }
+  gapi.load("client" , start)
 
+})
+
+// end
   // inputlardan xosil bolayotgan object
 
   const handelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -97,8 +111,12 @@ function Register() {
           </label>
           <button>Davom eting</button>
         </form>
+        
+        <div>
+        </div>
         <p>
-          Akkauntgiz bor bolsa <Link to={"/"}>Kirish</Link>
+
+       <Link className="link" to={"/"} ><p>Login</p></Link>
         </p>
         <p>{xat}</p>
       </div>

@@ -22,7 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />}></Route>
         <Route path="register" element={<Register />}></Route>
-        <Route path="user" element={<Layout />} >
+        <Route path="user" element={<Layout />}>
           <Route index element={<Main />}></Route>
           <Route path="accountPage" element={<AccountPage />}>
             <Route path="ish" element={<Jobs/>}></Route>
@@ -36,7 +36,7 @@ function App() {
           <Route path="addPhoto" element={<UserPhoto />}></Route>
           <Route path="edit" element={<EditPage />}></Route>
         </Route>
-        <Route path="*"  element={<NoPage />} ></Route>
+        <Route path="*" element={<NoPage />}></Route>
       </Routes>
     </BrowserRouter>
   );

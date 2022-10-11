@@ -1,18 +1,23 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../hook/hook";
 import { loginInterface } from "../interface/registerInterface";
 import { setUserId } from "../redux/userIdSlise";
-import google from "../images/google.svg";
 import apple from "../images/apple.png";
-import facebook from "../images/facebook.png";
+import { gapi } from "gapi-script";
+import FacebookLogin from "react-facebook-login";
+// import LoginButton from "../components/google_login";
 import "../style/login.scss";
-
+import GoogleLogin from "react-google-login";
+// import LoginButton from "../components/google-login";
+let clientId =
+  "376958828328-obualjstu96hflb5i45i90poqhip8a3p.apps.googleusercontent.com";
 function Login() {
   let navigate = useNavigate();
   let dispatch = useAppDispatch();
   let [text, setText] = useState("");
+  const [isclick, setIsClick] = useState<boolean>(false);
   const [user, setUser] = useState<loginInterface>({
     email: "",
     parol: "",
@@ -26,10 +31,72 @@ function Login() {
     e.preventDefault();
     axios
       .post("http://localhost:5000/api/user/login", user)
-      .then((res: any) => { 
+      .then((res: any) => {
         if (res.data.user) {
-          console.log(res.data.user)
-          // console.log(res.data)
+          console.log(res.data.user);
+          dispatch(setUserId(res.data.user));
+          navigate("/user");
+        } else {
+          setText("Password yoki user name xato");
+        }
+      })
+      .catch((err) => console.log(err));
+  };
+  //google
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clientId: clientId,
+        scope: "",
+      });
+    }
+    gapi.load("client", start);
+  }, []);
+  //endint
+
+  const onSuccess = (res: any) => {
+    const auth = {
+      ism: res.profileObj.givenName,
+      familiya: res.profileObj.givenName,
+      email: res.profileObj.email,
+      parol: res.profileObj.googleId,
+      profilRasmi:
+        "https://a5.behance.net/6ea9aa767d8e4bfd4c34068586c9b76450edbdc7/img/profile/no-image-138.png?cb=264615658",
+    };
+    axios
+      .post("http://localhost:5000/api/user/google-login", auth)
+      .then((res: any) => {
+        if (res.data.user) {
+          console.log(res.data.user);
+          dispatch(setUserId(res.data.user));
+          navigate("/user");
+        } else {
+          setText("Password yoki user name xato");
+        }
+      })
+      .catch((err) => console.log(err));
+  };
+  const onFailure = (res: any) => {
+    console.log("error of google", res);
+  };
+  //Facebook button ishlahi
+  const componentClicked = (res: any) => {
+    console.log("qqq");
+    // console.log(res, 'Login');
+  };
+  const responseFacebook = (res: any) => {
+    const pathphoto = {
+      ism: res.name,
+      familiya: res.name,
+      email: res.email,
+      parol: res.userID,
+      profilRasmi:
+        "https://a5.behance.net/6ea9aa767d8e4bfd4c34068586c9b76450edbdc7/img/profile/no-image-138.png?cb=264615658",
+    };
+    axios
+      .post("http://localhost:5000/api/user/facebook-login", pathphoto)
+      .then((res: any) => {
+        if (res.data.user) {
           dispatch(setUserId(res.data.user));
           navigate("/user" );
         } else {
@@ -37,6 +104,7 @@ function Login() {
         }
       })
       .catch((err) => console.log(err));
+    console.log(res);
   };
 
   return (
@@ -49,17 +117,29 @@ function Login() {
             </h1>
           </div>
           <div className="login-container">
+            {/* <LoginButton/> */}
             <form onSubmit={handleSubmit}>
               <h2>Login</h2>
               <p className="btn-socialMedia btn-google">
                 {" "}
-                <img src={google} alt="404" width={20} height={20} /> Google
-                orqali kirish
+                <GoogleLogin
+                  clientId={clientId}
+                  buttonText="Google orqali kirish"
+                  onSuccess={onSuccess}
+                  onFailure={onFailure}
+                  cookiePolicy={"single_host_origin"}
+                  isSignedIn={true}
+                />
               </p>
               <p className="btn-socialMedia btn-facebook">
                 {" "}
-                <img src={facebook} alt="404" width={20} height={20} /> Facebook
-                Orqali kirish
+                <FacebookLogin
+                  appId="435138342104865"
+                  autoLoad={true}
+                  fields="name,email,picture"
+                  onClick={componentClicked}
+                  callback={responseFacebook}
+                />
               </p>
               <p className="btn-socialMedia btn-apple">
                 {" "}
@@ -83,9 +163,11 @@ function Login() {
               />
 
               <p className="link">
-                Ro'yxatdan  o'tganmisiz ?{" "}
-                <Link to={"/register"}>Ro'yxatdan o'tish</Link>
+                <Link to={"/register"} className="link">
+                  Royxatdan o'tish
+                </Link>
               </p>
+
               <p style={{ textAlign: "center" }}>{text}</p>
               <button>Login</button>
             </form>

@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import "../style/emailjs.scss";
 
 function EmailJs() {
-  const [displayModal, setDisplayModal] = useState(false);
+  const [displayModal, setDisplayModal] = useState(true);
 
   const form = useRef<HTMLFormElement>(null);
   const handleClick = () => {
@@ -40,7 +40,7 @@ function EmailJs() {
     <div className="mainDiv">
       <div
         className="divForm"
-        style={{ opacity: displayModal ? 0 : 1 }}
+        style={{ display: displayModal ? "none" : "block" }}
       >
         <form onSubmit={handleSubmit} ref={form}>
           <input type="text" placeholder="Ismingizni kiriting" name="ism" />
