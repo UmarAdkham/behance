@@ -45,7 +45,7 @@ function AccountPage() {
             <h2>{loginUser.ism} {loginUser.familiya}</h2>
             <p>Uzbekistan</p>
             <button>
-              <h3><Link to={"/edit"}>Редактировать профиль</Link></h3>
+              <h3><Link to={"/user/edit"}>Редактировать профиль</Link></h3>
             </button>
 
             <div className="adobe-portfolio">
