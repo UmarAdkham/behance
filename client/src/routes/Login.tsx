@@ -4,10 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../hook/hook";
 import { loginInterface } from "../interface/registerInterface";
 import { setUserId } from "../redux/userIdSlise";
-import google from "../images/google.svg";
 import apple from "../images/apple.png";
-import facebook from "../images/facebook.png";
 import { gapi } from "gapi-script";
+import FacebookLogin from "react-facebook-login";
 // import LoginButton from "../components/google_login";
 import "../style/login.scss";
 import GoogleLogin from "react-google-login";
@@ -55,7 +54,6 @@ function Login() {
   }, []);
   //endint
 
-
   const onSuccess = (res: any) => {
     const auth = {
       ism: res.profileObj.givenName,
@@ -80,6 +78,34 @@ function Login() {
   };
   const onFailure = (res: any) => {
     console.log("error of google", res);
+  };
+  //Facebook button ishlahi
+  const componentClicked = (res: any) => {
+    console.log("qqq");
+    // console.log(res, 'Login');
+  };
+  const responseFacebook = (res: any) => {
+    const pathphoto = {
+      ism: res.name,
+      familiya: res.name,
+      email: res.email,
+      parol: res.userID,
+      profilRasmi:
+        "https://a5.behance.net/6ea9aa767d8e4bfd4c34068586c9b76450edbdc7/img/profile/no-image-138.png?cb=264615658",
+    };
+    axios
+      .post("http://localhost:5000/api/user/facebook-login", pathphoto)
+      .then((res: any) => {
+        if (res.data.user) {
+          console.log(res.data.user);
+          dispatch(setUserId(res.data.user));
+          navigate("/user");
+        } else {
+          setText("Password yoki user name xato");
+        }
+      })
+      .catch((err) => console.log(err));
+    console.log(res);
   };
 
   return (
@@ -108,8 +134,13 @@ function Login() {
               </p>
               <p className="btn-socialMedia btn-facebook">
                 {" "}
-                <img src={facebook} alt="404" width={20} height={20} /> Facebook
-                Orqali kirish
+                <FacebookLogin
+                  appId="435138342104865"
+                  autoLoad={true}
+                  fields="name,email,picture"
+                  onClick={componentClicked}
+                  callback={responseFacebook}
+                />
               </p>
               <p className="btn-socialMedia btn-apple">
                 {" "}
