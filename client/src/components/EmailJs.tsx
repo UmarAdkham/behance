@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import "../style/emailjs.scss";
 
 function EmailJs() {
-  const [displayModal, setDisplayModal] = useState(false);
+  const [displayModal, setDisplayModal] = useState(true);
 
   const form = useRef<HTMLFormElement>(null);
   const handleClick = () => {
