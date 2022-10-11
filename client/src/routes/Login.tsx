@@ -8,6 +8,8 @@ import google from "../images/google.svg";
 import apple from "../images/apple.png";
 import facebook from "../images/facebook.png";
 import { gapi } from "gapi-script";
+import ReactDOM from "react-dom";
+import FacebookLogin from "react-facebook-login";
 // import LoginButton from "../components/google_login";
 import "../style/login.scss";
 import GoogleLogin from "react-google-login";
@@ -55,7 +57,6 @@ function Login() {
   }, []);
   //endint
 
-
   const onSuccess = (res: any) => {
     const auth = {
       ism: res.profileObj.givenName,
@@ -80,6 +81,13 @@ function Login() {
   };
   const onFailure = (res: any) => {
     console.log("error of google", res);
+  };
+  //Facebook button ishlahi
+  const componentClicked = (res: any) => {
+    console.log(res, 'Login');
+  };
+  const responseFacebook = (res: any) => {
+    console.log(res,'xato');
   };
 
   return (
@@ -108,8 +116,14 @@ function Login() {
               </p>
               <p className="btn-socialMedia btn-facebook">
                 {" "}
-                <img src={facebook} alt="404" width={20} height={20} /> Facebook
-                Orqali kirish
+                <FacebookLogin
+                  appId="435138342104865"
+                  autoLoad={true}
+                  fields="name,email,picture"
+                  onClick={componentClicked}
+                  callback={responseFacebook}
+                />
+      
               </p>
               <p className="btn-socialMedia btn-apple">
                 {" "}
