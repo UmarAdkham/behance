@@ -33,6 +33,27 @@ const google_login = async (req, res) => {
     }
   }
 }
+const facebook_login = async (req, res) => {
+  const { ism, familiya, email, parol, profilRasmi } = req.body;
+  const user = await User.findOne({ email, parol });
+  console.log(user);
+  if (user) {
+    res.status(200).json({ user });
+  } else {
+    try {
+      const newStudent = await User.create({
+        ism,
+        familiya,
+        email,
+        parol,
+        profilRasmi,
+      });
+      res.status(200).json(newStudent);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
   const register = async (req, res) => {
     const { ism, familiya, email, parol, profilRasmi } = req.body;
 
@@ -98,4 +119,4 @@ const photoedit = async (req, res) => {
   }
 };
 
-module.exports = { login, google_login, register, edit, photoedit };
+module.exports = { login, google_login,facebook_login, register, edit, photoedit };

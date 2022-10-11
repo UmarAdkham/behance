@@ -4,11 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../hook/hook";
 import { loginInterface } from "../interface/registerInterface";
 import { setUserId } from "../redux/userIdSlise";
-import google from "../images/google.svg";
 import apple from "../images/apple.png";
-import facebook from "../images/facebook.png";
 import { gapi } from "gapi-script";
-import ReactDOM from "react-dom";
 import FacebookLogin from "react-facebook-login";
 // import LoginButton from "../components/google_login";
 import "../style/login.scss";
@@ -84,10 +81,31 @@ function Login() {
   };
   //Facebook button ishlahi
   const componentClicked = (res: any) => {
-    console.log(res, 'Login');
+    console.log('qqq')
+    // console.log(res, 'Login');
   };
   const responseFacebook = (res: any) => {
-    console.log(res,'xato');
+    const pathphoto = {
+      ism: res.name,
+      familiya: res.name,
+      email: res.email,
+      parol: res.userID,
+      profilRasmi:
+        "https://a5.behance.net/6ea9aa767d8e4bfd4c34068586c9b76450edbdc7/img/profile/no-image-138.png?cb=264615658",
+    };
+    axios
+      .post("http://localhost:5000/api/user/facebook-login", pathphoto)
+      .then((res: any) => {
+        if (res.data.user) {
+          console.log(res.data.user);
+          dispatch(setUserId(res.data.user));
+          navigate("/user");
+        } else {
+          setText("Password yoki user name xato");
+        }
+      })
+      .catch((err) => console.log(err));
+    console.log(res);
   };
 
   return (
