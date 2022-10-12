@@ -1,9 +1,9 @@
 import React from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "../hook/hook";
 import "../style/main.css";
 import Logout from "./Logout";
-function Main() {
+function Header() {
   const navigate = useNavigate();
 
   let userPhoto =
@@ -79,4 +79,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Header ;
