@@ -11,17 +11,18 @@ const liker = require("../images/thumb-up-fill.png");
 
 const close = require("../images/close-line.png");
 
-
 function Main() {
   const [open, setOpen] = React.useState(false);
+
   const handleOpen = (id: string) => {
     setOpen(true);
     axios.post(`http://localhost:5000/api/photo/${id}}`).then((res) => {});
   };
+
   const handleClose = () => setOpen(false);
 
-  const [all, setAll] =React.useState([])
-  
+  const [all, setAll] = React.useState([]);
+
   const style = {
     position: "absolute",
     top: "50%",
@@ -35,22 +36,15 @@ function Main() {
 
   const [photos, setPhotos] = React.useState([]);
   React.useEffect(() => {
-    axios
-       .get('http://localhost:5000/api/photos/photos')
-      .then((res) => {
-        setPhotos(res.data);
-        console.log(res.data);
-        console.log(photos);
-      });
+    axios.get("http://localhost:5000/api/photos/photos").then((res) => {
+      setPhotos(res.data);
+    });
   }, []);
 
-
-    
   return (
     <>
       <Header />
       <div className="mainSec">
-        {/* <Button >Open modal</Button> */}
         <img
           src={
             "https://avatars.mds.yandex.net/i?id=393b50c8dfdbb1a1369fc2af730edf4a-4576362-images-thumbs&n=13"
@@ -61,6 +55,7 @@ function Main() {
             handleOpen("6335239a86dca12cd1d5f93d");
           }}
         />
+
         <Modal
           open={open}
           onClose={handleClose}
@@ -74,6 +69,9 @@ function Main() {
                   "https://stage.super.ru/upload/20196/60b5214cc32ec4ae5c66b33820bb2b08-1400.jpg"
                 }
               />
+
+
+
               <div>
                 <div className="likeButton">
                   <img src={liker} />
@@ -87,10 +85,17 @@ function Main() {
         </Modal>
 
 
-
-
-        
-        <h1>salom</h1>
+        <div className="main-img-container">
+          { photos.length > 0 ?   photos.map((photo: any) => {
+            return (
+              <div>
+                <img key={photo.userId} src={photo.url} alt="404" />
+                <p>{photo.title}</p>
+              </div>
+            );
+          })
+        : <h1></h1>}
+        </div>
         <EmailJs />
         <Footer />
       </div>

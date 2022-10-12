@@ -1,8 +1,9 @@
 import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useAppSelector } from "../hook/hook";
-import "../style/main.css";
 import Logout from "./Logout";
+import "../style/header.scss";
+
 function Main() {
   const navigate = useNavigate();
 
@@ -18,47 +19,51 @@ function Main() {
   };
 
   return (
-    <div>
+    <>
       <div className="navBar">
         <ul>
           <li>
-            {" "}
             <a className="s2" href="#">
-              Behance
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Behance_logo.svg/1200px-Behance_logo.svg.png"
+                width={90}
+                height={15}
+                alt="behance"
+              />
             </a>
           </li>
           <li>
-            {" "}
-            <a className="s1" href="#">
-              Discover
-            </a>
+            <a href="#">Для вас</a>
           </li>
           <li>
-            {" "}
-            <a className="s1" href="#">
-              Livestreams
-            </a>
+            <a href="#">Лучшие</a>
           </li>
           <li>
-            {" "}
-            <a className="s1" href="#">
-              Hire
-            </a>
+            <a href="#">Прямые трансляции</a>
           </li>
           <li>
-            {" "}
-            <a className="s1" href="#">
-              Jobs
-            </a>
+            <a href="#">Поиск и найм</a>
+          </li>
+          <li>
+            <a href="#">Вакансии</a>
+          </li>
+
+          <li>
+            <input type="text" />
+          </li>
+          <li>
+            <button>Поделиться проектом</button>
           </li>
 
           <li className="sharePhoto">
             <img
+              width={30} height={30}
               onClick={sharePhoto}
               className="linkToAccountPage"
               src={userPhoto}
             />
           </li>
+
           <li>
             <button className="linkShare" onClick={userPhotoPage}>
               Rasm Ulashish
@@ -75,7 +80,7 @@ function Main() {
         </ul>
       </div>
       <div className="content"></div>
-    </div>
+    </>
   );
 }
 

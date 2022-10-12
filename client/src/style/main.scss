@@ -1,45 +1,62 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 .mainSec {
   width: 100%;
+  height: auto;
 
-}
 
-.bagImage {
-  width: 100%;
-  height: 100%;
-  /* background-image: url("https://stage.super.ru/upload/20196/60b5214cc32ec4ae5c66b33820bb2b08-1400.jpg"); */
-  text-align: right;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
+  .main-img-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 
-.likeButton {
-  width: 60px;
-  height: 60px;
-  background-color: #0057FF;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: right;
-  position: absolute;
-  right: -5%;
-  top: 10%;
-}
+    img {
+      width: 300px;
+      height: 250px;
+    }
 
-.box-modal {
-  border: none;
-  outline: none;
-}
+  }
 
-.closeImage {
-  position: absolute;
-  right: -4%;
+
+  .bagImage {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .likeButton {
+    width: 60px;
+    height: 60px;
+    background-color: #0057FF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    position: absolute;
+    right: -5%;
+    top: 10%;
+  }
+
+
+  .box-modal {
+    border: none;
+    outline: none;
+  }
+
+
+  .closeImage {
+    position: absolute;
+    right: -4%;
+  }
 
 }
