@@ -4,7 +4,6 @@ import { useAppSelector } from "../hook/hook";
 import Logout from "./Logout";
 import "../style/header.scss";
 
-function Main() {
 function Header() {
   const navigate = useNavigate();
 

@@ -14,14 +14,13 @@ function Main() {
   const [open, setOpen] = React.useState(false);
 
   const [photos, setPhotos] = React.useState([]);
-  
+
   const handleOpen = (id: string) => {
     setOpen(true);
     axios.post(`http://localhost:5000/api/photo/${id}}`).then((res) => {});
   };
 
   const handleClose = () => setOpen(false);
-
 
   const [all, setAll] = React.useState([]);
 
@@ -36,11 +35,12 @@ function Main() {
     // bgcolor: "red",
   };
 
+
   React.useEffect(() => {
-    axios
-    .get("http://localhost:5000/api/photos/photos")
-    .then((res) => {setPhotos(res.data)};
-    },[]);
+    axios.get("http://localhost:5000/api/photos/photos").then((res) => {
+      setPhotos(res.data);
+    });
+  }, []);
 
   return (
     <>
@@ -84,17 +84,15 @@ function Main() {
           </Box>
         </Modal>
 
-
         <div className="main-img-container">
-          { photos.length > 0 ?   photos.map((photo: any) => {
+          {photos.map((photo: any) => {
             return (
               <div>
                 <img key={photo.userId} src={photo.url} alt="404" />
                 <p>{photo.title}</p>
               </div>
             );
-          })
-        : <h1></h1>}
+          })}
         </div>
         <EmailJs />
       </div>
