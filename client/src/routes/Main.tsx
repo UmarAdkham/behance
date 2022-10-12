@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import "../style/main.scss";
 import axios from "axios";
 import EmailJs from "../components/EmailJs";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 
 const liker = require("../images/thumb-up-fill.png");
 
@@ -14,12 +13,15 @@ const close = require("../images/close-line.png");
 function Main() {
   const [open, setOpen] = React.useState(false);
 
+  const [photos, setPhotos] = React.useState([]);
+  
   const handleOpen = (id: string) => {
     setOpen(true);
     axios.post(`http://localhost:5000/api/photo/${id}}`).then((res) => {});
   };
 
   const handleClose = () => setOpen(false);
+
 
   const [all, setAll] = React.useState([]);
 
@@ -34,16 +36,14 @@ function Main() {
     // bgcolor: "red",
   };
 
-  const [photos, setPhotos] = React.useState([]);
   React.useEffect(() => {
-    axios.get("http://localhost:5000/api/photos/photos").then((res) => {
-      setPhotos(res.data);
-    });
-  }, []);
+    axios
+    .get("http://localhost:5000/api/photos/photos")
+    .then((res) => {setPhotos(res.data)};
+    },[]);
 
   return (
     <>
-      <Header />
       <div className="mainSec">
         <img
           src={
@@ -97,7 +97,6 @@ function Main() {
         : <h1></h1>}
         </div>
         <EmailJs />
-        <Footer />
       </div>
     </>
   );

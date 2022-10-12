@@ -17,7 +17,6 @@ function Login() {
   let navigate = useNavigate();
   let dispatch = useAppDispatch();
   let [text, setText] = useState("");
-  const [isclick, setIsClick] = useState<boolean>(false);
   const [user, setUser] = useState<loginInterface>({
     email: "",
     parol: "",
@@ -98,7 +97,7 @@ function Login() {
       .then((res: any) => {
         if (res.data.user) {
           dispatch(setUserId(res.data.user));
-          navigate("/user" );
+          navigate("/user");
         } else {
           setText("Password yoki user name xato");
         }
@@ -110,7 +109,7 @@ function Login() {
   return (
     <>
       <div className="login-wrapper">
-        <div className="login-box"> 
+        <div className="login-box">
           <div>
             <h1>
               <span>Be</span> Behance

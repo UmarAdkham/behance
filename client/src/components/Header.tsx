@@ -1,10 +1,11 @@
 import React from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "../hook/hook";
 import Logout from "./Logout";
 import "../style/header.scss";
 
 function Main() {
+function Header() {
   const navigate = useNavigate();
 
   let userPhoto =
@@ -84,4 +85,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Header ;
