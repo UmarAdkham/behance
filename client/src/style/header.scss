@@ -1,25 +1,61 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
 
-.navBar{
+.navBar {
     width: 100%;
     height: 60px;
     border-bottom: 1px solid rgb(198, 196, 196);
     display: flex;
-    
+    align-items: center;
+    background-color: #4b4b4b;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
     ul {
-        li{
+        li {
             display: inline-block;
-            border: 1px solid orange;
-            padding: 10px;
-    
-            a{
+            // border: 1px solid orange;
+            // padding: 10px;
+            margin: 5px 15px;
+            line-height: 60px;
+
+            a {
                 text-decoration: none;
-                color: black;
+                color: white;
                 font-size: 16px;
+            }
+
+            input {
+                width: 22vw;
+                height: 30px;
+                border-radius: 25px;
+                border: none;
+                outline: none;
+            }
+
+            button {
+                width: 180px;
+                height: 30px;
+                border: none;
+                border-radius: 25px;
+            }
+        }
+
+        .sharePhoto {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            top: 10px;
+            
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
             }
         }
     }

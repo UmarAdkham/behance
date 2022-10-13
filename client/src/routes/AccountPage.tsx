@@ -88,31 +88,31 @@ function AccountPage() {
         <div className="nav-bar">
           <ul>
             <li>
-              <Link to="ish">adf</Link>
+              <Link to="ish">Работа</Link>
             </li>
 
             <li>
-              <Link to="nft">KKK</Link>
+              <Link to="nft">NFT</Link>
             </li>
 
             <li>
-              <Link to="jonliefir">sfse</Link>
+              <Link to="jonliefir">Прямые трансляции</Link>
             </li>
 
             <li>
-              <Link to="kayfiyatDoskasi">fgdg</Link>
+              <Link to="kayfiyatDoskasi">Доски настроения</Link>
             </li>
 
             <li>
-              <Link to="baholash">dfgdfg</Link>
+              <Link to="baholash">Оценки</Link>
             </li>
 
             <li>
-              <Link to="tahlil">rgg</Link>
+              <Link to="tahlil">Анализ</Link>
             </li>
 
             <li>
-              <Link to="qoralama">dthtdh</Link>
+              <Link to="qoralama">Черновики</Link>
             </li>
 
           </ul>
