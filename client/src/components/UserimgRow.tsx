@@ -10,7 +10,7 @@ function UserimgRow(props: Props) {
 
     return (
         <div>
-            <p>{props._id}</p>
+            {/* <p>{props._id}</p> */}
             <img src={props.url} alt="404" width={200} height={200} />
             <button>Delit</button>
         </div>

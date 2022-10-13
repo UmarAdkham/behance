@@ -46,10 +46,10 @@ function EmailJs() {
           <input type="text" placeholder="Ismingizni kiriting" name="ism" />
           <input
             type="email"
-            placeholder="emailingizni kiriting"
+            placeholder="Emailingizni kiriting"
             name="Email"
           />
-          <textarea name="text" placeholder="fikringizni kiriting"></textarea>
+          <textarea name="text" placeholder="Fikringiz bilan bo'lishing"></textarea>
           <button>Send</button>
         </form>
       </div>

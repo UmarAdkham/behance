@@ -6,7 +6,7 @@ import { loginInterface } from "../interface/registerInterface";
 import { setUserId } from "../redux/userIdSlise";
 import apple from "../images/apple.png";
 import { gapi } from "gapi-script";
-import FacebookLogin from "react-facebook-login";
+// import FacebookLogin from "react-facebook-login";
 // import LoginButton from "../components/google_login";
 import "../style/login.scss";
 import GoogleLogin from "react-google-login";
@@ -130,7 +130,7 @@ function Login() {
                   isSignedIn={true}
                 />
               </p>
-              <p className="btn-socialMedia btn-facebook">
+              {/* <p className="btn-socialMedia btn-facebook">
                 {" "}
                 <FacebookLogin
                   appId="435138342104865"
@@ -139,7 +139,7 @@ function Login() {
                   onClick={componentClicked}
                   callback={responseFacebook}
                 />
-              </p>
+              </p> */}
               <p className="btn-socialMedia btn-apple">
                 {" "}
                 <img src={apple} alt="404" width={20} height={20} /> Apple
