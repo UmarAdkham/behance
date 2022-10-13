@@ -23,7 +23,7 @@ function Header() {
       <div className="navBar">
         <ul>
           <li>
-            <a className="s2" href="#">
+            <a className="logo" href="../routes//Main.tsx">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Behance_logo.svg/1200px-Behance_logo.svg.png"
                 width={90}
@@ -57,26 +57,26 @@ function Header() {
 
           <li className="sharePhoto">
             <img
-              width={30} height={30}
               onClick={sharePhoto}
               className="linkToAccountPage"
               src={userPhoto}
             />
           </li>
 
-          <li>
+          {/* <li>
             <button className="linkShare" onClick={userPhotoPage}>
               Rasm Ulashish
             </button>
-          </li>
+          </li> */}
 
-          <li>
+          {/* <li>
             <button className="signbt">Sign up</button>
-          </li>
+          </li> */}
 
-          <li>
+          {/* <li>
             <Logout />
-          </li>
+          </li> */}
+
         </ul>
       </div>
       <div className="content"></div>
