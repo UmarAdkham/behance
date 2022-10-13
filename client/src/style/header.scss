@@ -10,6 +10,7 @@
     border-bottom: 1px solid rgb(198, 196, 196);
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     background-color: #4b4b4b;
     position: fixed;
     top: 0;
@@ -18,9 +19,7 @@
     ul {
         li {
             display: inline-block;
-            // border: 1px solid orange;
-            // padding: 10px;
-            margin: 5px 15px;
+            margin: -5px 12px;
             line-height: 60px;
 
             a {
@@ -29,16 +28,25 @@
                 font-size: 16px;
             }
 
-            input {
+           div{
                 width: 22vw;
                 height: 30px;
+                display: flex;
+                justify-content: flex-end;
                 border-radius: 25px;
+                background: #fff;
+                overflow: hidden;
+
+            input {
+                width: 90%;
+                height: 100%;
                 border: none;
                 outline: none;
             }
+           }
 
             button {
-                width: 180px;
+                width: 185px;
                 height: 30px;
                 border: none;
                 border-radius: 25px;
@@ -46,16 +54,30 @@
         }
 
         .sharePhoto {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             position: relative;
-            top: 10px;
+            top: 7px;
+            right: 7px;
             
             img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 border-radius: 50%;
+            }
+        }
+    }
+
+    @media (max-width:1288px ) and (min-width:1260px) {
+        ul {
+            li{
+                div{
+                    width: 100%;
+                }
+                button{
+                    width: 12vw;
+                }
             }
         }
     }

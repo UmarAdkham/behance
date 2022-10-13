@@ -111,7 +111,7 @@ const photoedit = async (req, res) => {
       { new: true },
       (err, updatedPhoto) => {
         if (!err) res.json(updatedPhoto);
-        else res.json({ error: err.message });
+        else res.json({ error: err.message  });
       }
     );
   } catch (error) {

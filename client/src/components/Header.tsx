@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "../hook/hook";
 import Logout from "./Logout";
 import "../style/header.scss";
+import { FaBell } from "react-icons/fa";
 
 function Header() {
   const navigate = useNavigate();
@@ -14,10 +15,11 @@ function Header() {
   const sharePhoto = () => {
     navigate("/user/accountPage");
   };
+
   const userPhotoPage = () => {
     navigate("/user/addPhoto");
   };
-
+  let styles = { color: "white", fontSize: "18px", margin: " 0  0 -2px 20px" };
   return (
     <>
       <div className="navBar">
@@ -49,18 +51,12 @@ function Header() {
           </li>
 
           <li>
-            <input type="text" />
+            <div>
+              <input type="text" placeholder="Поиск..." />
+            </div>
           </li>
           <li>
             <button>Поделиться проектом</button>
-          </li>
-
-          <li className="sharePhoto">
-            <img
-              onClick={sharePhoto}
-              className="linkToAccountPage"
-              src={userPhoto}
-            />
           </li>
 
           {/* <li>
@@ -77,6 +73,36 @@ function Header() {
             <Logout />
           </li> */}
 
+          <li>
+            <span>
+              <img
+                src="http://www.clker.com/cliparts/l/4/u/u/D/X/closed-envelope-hi.png"
+                width={20}
+                height={15}
+                alt="404-envelope"
+              />
+            </span>
+            <span>{<FaBell style={styles} />}</span>
+          </li>
+
+          <li className="sharePhoto">
+            <img
+              onClick={sharePhoto}
+              className="linkToAccountPage"
+              src={userPhoto}
+            />
+          </li>
+          <li>
+            <span>
+              <img
+                src="https://www.brasoftware.com.br/Imagens/Parceiros/adobe.png"
+                width={90}
+                height={40}
+                style={{ margin: "0 0 -15px 0 " }}
+                alt="404"
+              />
+            </span>
+          </li>
         </ul>
       </div>
       <div className="content"></div>
@@ -84,4 +110,4 @@ function Header() {
   );
 }
 
-export default Header ;
+export default Header;

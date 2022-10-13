@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import UserImgs from "../components/UserImgs";
 import { useAppSelector } from "../hook/hook";
 import "../style/account-page.scss";
+import { TbPencil} from "react-icons/tb";
+import { FaRegEnvelope } from "react-icons/fa";
+
 
 function AccountPage() {
 
@@ -62,11 +65,11 @@ function AccountPage() {
             </h2>
             <p>{joylashuv.name}</p>
             <button>
-              <h3><Link to={"/user/edit"}>Редактировать профиль</Link></h3>
+              <h3>{<TbPencil style={{fontSize: "1.5em" , marginBottom:'-5px'}}/>}<Link to={"/user/edit"}> Редактировать профиль</Link></h3>
             </button>
 
             <div className="adobe-portfolio">
-              <h3>Опробовать Adobe Portfolio</h3>
+              <h3> Опробовать Adobe Portfolio</h3>
             </div>
           </div>
 
@@ -78,7 +81,7 @@ function AccountPage() {
               Добавьте новый раздел «Нанять», чтобы сообщить посетителям, что вы
               ищете новые возможности для обеспечения занятости.
             </p>
-            <button>Изменить доступность</button>
+            <button>{< FaRegEnvelope style={{margin:"0 5px -3px 0"}}/>} Изменить доступность</button>
           </div>
           <p className="createDate">{loginUser.createdAt}</p>
         </div>
