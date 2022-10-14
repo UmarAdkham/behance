@@ -17,6 +17,7 @@
     z-index: 10;
 
     ul {
+
         li {
             display: inline-block;
             margin: -5px 12px;
@@ -26,28 +27,36 @@
                 text-decoration: none;
                 color: white;
                 font-size: 16px;
+
+
             }
 
-           div{
+            a:hover {
+                border-bottom: 3px solid black;
+                padding-bottom: 19px;
+                transition: 1s;
+            }
+
+            .input-div {
                 width: 22vw;
-                height: 30px;
+                height: 35px;
                 display: flex;
                 justify-content: flex-end;
                 border-radius: 25px;
                 background: #fff;
                 overflow: hidden;
 
-            input {
-                width: 90%;
-                height: 100%;
-                border: none;
-                outline: none;
+                input {
+                    width: 90%;
+                    height: 100%;
+                    border: none;
+                    outline: none;
+                }
             }
-           }
 
             button {
                 width: 185px;
-                height: 30px;
+                height: 35px;
                 border: none;
                 border-radius: 25px;
             }
@@ -59,8 +68,8 @@
             position: relative;
             top: 7px;
             right: 7px;
-            
-            img{
+
+            img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -68,16 +77,23 @@
             }
         }
     }
+}
 
-    @media (max-width:1288px ) and (min-width:1260px) {
-        ul {
-            li{
-                div{
-                    width: 100%;
-                }
-                button{
-                    width: 12vw;
-                }
+
+
+
+/*---------------------------------------Media----------------------------------------------------*/
+
+
+@media (max-width:1288px) and (min-width:1260px) {
+    ul {
+        li {
+            div {
+                width: 100%;
+            }
+
+            button {
+                width: 12vw;
             }
         }
     }

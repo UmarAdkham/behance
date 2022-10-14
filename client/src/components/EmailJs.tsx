@@ -7,10 +7,11 @@ function EmailJs() {
   const [displayModal, setDisplayModal] = useState(true);
 
   const form = useRef<HTMLFormElement>(null);
+
   const handleClick = () => {
     setDisplayModal(!displayModal);
   };
-
+     
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("BEFORE IF");
