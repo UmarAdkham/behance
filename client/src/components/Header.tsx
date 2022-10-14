@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "../hook/hook";
 import Logout from "./Logout";
 import "../style/header.scss";
-import { FaBell } from "react-icons/fa";
+import { FaBell, FaSearch } from "react-icons/fa";
 
 function Header() {
   const navigate = useNavigate();
+
+  // const [toggle, setToggle] = useState<any>(false);
 
   let userPhoto =
     useAppSelector((state) => state.user.profilRasmi) ||
@@ -19,42 +21,52 @@ function Header() {
   const userPhotoPage = () => {
     navigate("/user/addPhoto");
   };
+
   let styles = { color: "white", fontSize: "18px", margin: " 0  0 -2px 20px" };
+
+ 
+
   return (
     <>
       <div className="navBar">
+        
         <ul>
           <li>
-            <a className="logo" href="../routes//Main.tsx">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Behance_logo.svg/1200px-Behance_logo.svg.png"
-                width={90}
-                height={15}
-                alt="behance"
-              />
-            </a>
+            <img
+              className="logo"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Behance_logo.svg/1200px-Behance_logo.svg.png"
+              width={90}
+              height={15}
+              alt="behance"
+            />
           </li>
+
           <li>
             <a href="#">Для вас</a>
           </li>
+
           <li>
             <a href="#">Лучшие</a>
           </li>
+
           <li>
             <a href="#">Прямые трансляции</a>
           </li>
+
           <li>
             <a href="#">Поиск и найм</a>
           </li>
+
           <li>
             <a href="#">Вакансии</a>
           </li>
 
           <li>
-            <div>
+            <div className="input-div">
               <input type="text" placeholder="Поиск..." />
             </div>
           </li>
+
           <li>
             <button>Поделиться проектом</button>
           </li>
@@ -92,6 +104,7 @@ function Header() {
               src={userPhoto}
             />
           </li>
+
           <li>
             <span>
               <img
