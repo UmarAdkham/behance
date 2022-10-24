@@ -12,17 +12,20 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import axios from "axios";
 import { useAppSelector } from "../hook/hook";
+import { useNavigate } from "react-router-dom";
 function UserPhoto() {
   // m ui setate
   const [progress, setProgress] = React.useState(0);
   const [open, setOpen] = React.useState(false);
-  // o'zmizni state lar 
+  // o'zmizni state lar
   const [photo, setPhoto] = useState("");
   const [haveImgs, setHandleImg] = useState<boolean>(false);
   const [text, setText] = useState<string>("");
-  let UserId = useAppSelector((state) => { return state.user._id })
+  let UserId = useAppSelector((state) => {
+    return state.user._id;
+  });
   console.log(UserId);
-
+  const navigate = useNavigate();
   //m ui
   React.useEffect(() => {
     const timer = setInterval(() => {
@@ -42,7 +45,7 @@ function UserPhoto() {
     setOpen(false);
   };
   //m ui end
-  // upload page dan foto linkni olish 
+  // upload page dan foto linkni olish
   const getPhoto = (photo: any) => {
     setPhoto(photo);
     setTimeout(() => {
@@ -61,7 +64,7 @@ function UserPhoto() {
         console.log("uploaded");
       }
     });
-
+    navigate("/user");
     setOpen(false);
   };
   return (
