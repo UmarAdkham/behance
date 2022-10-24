@@ -29,7 +29,6 @@ function Header() {
   return (
     <>
       <div className="navBar">
-        
         <ul>
           <li>
             <img
@@ -68,7 +67,7 @@ function Header() {
           </li>
 
           <li>
-            <button>Поделиться проектом</button>
+            <button onClick={userPhotoPage}>Поделиться проектом</button>
           </li>
 
           {/* <li>
